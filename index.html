@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FreeRatesUpdate.com — Get Today’s Mortgage Rates</title>
+  <meta name="description" content="Get today’s mortgage rates in minutes. Request a personalized quote — fast, no pressure." />
+  <style>
+    :root{
+      --bg:#0b1220; --card:#111a2e; --text:#e7eefc; --muted:#b5c4e6;
+      --accent:#4aa3ff; --accent2:#7bffcf; --danger:#ff5c7a;
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(1200px 700px at 20% 10%, #132349 0%, var(--bg) 55%), var(--bg);color:var(--text)}
+    a{color:inherit}
+    .wrap{max-width:980px;margin:0 auto;padding:28px 18px 60px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+    .brand{font-weight:800;letter-spacing:.2px}
+    .pill{font-size:12px;color:var(--muted);border:1px solid rgba(231,238,252,.18);padding:8px 10px;border-radius:999px;background:rgba(17,26,46,.35)}
+    .hero{display:grid;grid-template-columns:1.25fr .9fr;gap:18px;align-items:stretch}
+    @media (max-width: 860px){.hero{grid-template-columns:1fr}}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));border:1px solid rgba(231,238,252,.14);border-radius:var(--radius);box-shadow:0 20px 50px rgba(0,0,0,.35)}
+    .left{padding:26px}
+    h1{margin:0 0 10px;font-size:44px;line-height:1.05}
+    @media (max-width: 860px){h1{font-size:36px}}
+    .sub{color:var(--muted);font-size:16px;line-height:1.55;margin:0 0 18px}
+    .points{display:grid;gap:10px;margin:18px 0 0;padding:0;list-style:none}
+    .points li{display:flex;gap:10px;align-items:flex-start;color:var(--muted)}
+    .dot{width:10px;height:10px;border-radius:999px;margin-top:7px;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+
+    .form{padding:22px}
+    .form h2{margin:0 0 6px;font-size:18px}
+    .form p{margin:0 0 14px;color:var(--muted);font-size:13px;line-height:1.45}
+    label{display:block;font-size:12px;color:var(--muted);margin:10px 0 6px}
+    input, select, textarea{width:100%;padding:12px 12px;border-radius:12px;border:1px solid rgba(231,238,252,.16);background:rgba(17,26,46,.6);color:var(--text);outline:none}
+    input:focus, select:focus, textarea:focus{border-color:rgba(74,163,255,.55);box-shadow:0 0 0 4px rgba(74,163,255,.12)}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    @media (max-width: 520px){.row{grid-template-columns:1fr}}
+    .btn{margin-top:14px;width:100%;padding:12px 14px;border-radius:12px;border:0;background:linear-gradient(135deg,var(--accent),var(--accent2));font-weight:800;color:#04101b;cursor:pointer}
+    .fine{margin-top:10px;font-size:11px;color:rgba(181,196,230,.9);line-height:1.45}
+    footer{margin-top:18px;color:rgba(181,196,230,.85);font-size:12px;line-height:1.5}
+    .mini{opacity:.9}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">FreeRatesUpdate.com</div>
+      <div class="pill">Fast quotes • No pressure</div>
+    </header>
+
+    <section class="hero">
+      <div class="card left">
+        <h1>Get today’s mortgage rates — fast.</h1>
+        <p class="sub">Tell us a few details and we’ll send you a personalized rate quote. Purchase or refinance. No spam — just a straight answer.</p>
+
+        <ul class="points">
+          <li><span class="dot"></span><span><strong>Quick form</strong> (takes ~60 seconds)</span></li>
+          <li><span class="dot"></span><span><strong>Personalized options</strong> based on your goals</span></li>
+          <li><span class="dot"></span><span><strong>Clear next steps</strong> if it makes sense to move</span></li>
+        </ul>
+
+        <footer>
+          <div class="mini">By submitting, you agree to be contacted about your mortgage inquiry. Standard message/data rates may apply.</div>
+        </footer>
+      </div>
+
+      <div class="card form">
+        <h2>Request a quote</h2>
+        <p>We’ll email you back with current options. If you prefer a call/text, include your phone.</p>
+
+        <form action="https://formspree.io/f/xlglannz" method="POST">
+          <!-- Formspree helpers -->
+          <input type="hidden" name="_subject" value="FreeRatesUpdate Lead" />
+          <input type="hidden" name="_redirect" value="https://freeratesupdate.com/thank-you.html" />
+
+          <div class="row">
+            <div>
+              <label for="name">Full name</label>
+              <input id="name" name="name" autocomplete="name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="phone">Phone (optional)</label>
+              <input id="phone" name="phone" autocomplete="tel" inputmode="tel" />
+            </div>
+            <div>
+              <label for="purpose">I’m looking to…</label>
+              <select id="purpose" name="purpose" required>
+                <option value="">Select one</option>
+                <option>Purchase a home</option>
+                <option>Refinance</option>
+                <option>Cash-out refinance</option>
+              </select>
+            </div>
+          </div>
+
+          <label for="credit">Estimated credit score</label>
+          <select id="credit" name="credit" required>
+            <option value="">Select one</option>
+            <option>740+</option>
+            <option>700–739</option>
+            <option>660–699</option>
+            <option>620–659</option>
+            <option>Below 620</option>
+          </select>
+
+          <label for="message">Notes (optional)</label>
+          <textarea id="message" name="message" rows="4" placeholder="Anything helpful: purchase price, current rate, timeline, etc."></textarea>
+
+          <button class="btn" type="submit">Get my rate quote</button>
+          <div class="fine">We do not sell your info. This goes to our team inbox: info@freeratesupdate.com</div>
+        </form>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

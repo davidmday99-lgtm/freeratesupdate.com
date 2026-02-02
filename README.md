@@ -1,2 +1,5 @@
-# freeratesupdate.com
-FreeRatesUpdate.com — lead capture landing page (GitHub Pages + Formspree).
+# FreeRatesUpdate.com
+
+Static lead-capture landing page deployed via GitHub Pages.
+
+Form submissions: Formspree endpoint https://formspree.io/f/xlglannz
