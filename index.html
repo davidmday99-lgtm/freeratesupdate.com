@@ -206,6 +206,16 @@
       color:rgba(238,242,255,.85);
     }
 
+    /* Testimonials */
+    .testGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    @media (max-width: 960px){.testGrid{grid-template-columns:1fr}}
+    .test{padding:18px;position:relative;overflow:hidden}
+    .stars{letter-spacing:2px;color:rgba(245,158,11,.95);font-size:12px;margin-bottom:8px}
+    .quote{margin:0;color:rgba(238,242,255,.92);font-size:14px;line-height:1.6}
+    .who{margin-top:10px;color:rgba(185,199,238,.85);font-size:12px}
+    .test:before{content:"";position:absolute;inset:-1px;opacity:.45;background:linear-gradient(135deg, rgba(168,85,247,.20), rgba(33,212,180,.14), rgba(245,158,11,.12));pointer-events:none}
+    .test > *{position:relative}
+
     /* Form */
     .form{padding:22px}
     .form h2{margin:0 0 6px;font-size:18px}
@@ -454,6 +464,31 @@
             <div class="ctaRow"><a class="ghost" href="#quote">Explore equity</a></div>
           </div>
         </div>
+      </div>
+
+      <div class="section" aria-label="Testimonials">
+        <div class="sectionTitle">
+          <h2>Borrowers love how simple this is</h2>
+          <div class="hint">reviews (anonymized)</div>
+        </div>
+        <div class="testGrid">
+          <div class="card test">
+            <div class="stars">★★★★★</div>
+            <p class="quote">“Prompt communication, strong attention to detail, and we closed early with no interruptions.”</p>
+            <div class="who">Homebuyer • Minnesota</div>
+          </div>
+          <div class="card test">
+            <div class="stars">★★★★★</div>
+            <p class="quote">“Everything went very smooth and every question was answered clearly.”</p>
+            <div class="who">Borrower • Minnesota</div>
+          </div>
+          <div class="card test">
+            <div class="stars">★★★★★</div>
+            <p class="quote">“Fast, friendly, and any issues were handled immediately.”</p>
+            <div class="who">Borrower • Illinois</div>
+          </div>
+        </div>
+        <div class="rateNote" style="margin-top:10px;">Testimonials reflect individual experiences. Results and timelines vary by borrower and lender.</div>
       </div>
 
       <footer>
