@@ -105,7 +105,7 @@ const TOPICS = [
   }
 ];
 
-const AUTHOR = 'Michael Miller (pen name)';
+const AUTHOR = 'Michael Miller';
 
 function chicagoNowParts() {
   const parts = new Intl.DateTimeFormat('en-US', {
