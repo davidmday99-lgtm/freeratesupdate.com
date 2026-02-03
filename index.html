@@ -3,123 +3,354 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FreeRatesUpdate.com — Get Today’s Mortgage Rates</title>
-  <meta name="description" content="Get today’s mortgage rates in minutes. Request a personalized quote — fast, no pressure." />
+  <title>FreeRatesUpdate.com — Compare Mortgage Rates</title>
+  <meta name="description" content="Compare mortgage rate options for purchase, refinance, cash-out, and home equity. Quick quote request form." />
+  <meta name="theme-color" content="#0b1220" />
   <style>
     :root{
-      --bg:#0b1220; --card:#111a2e; --text:#e7eefc; --muted:#b5c4e6;
-      --accent:#4aa3ff; --accent2:#7bffcf; --danger:#ff5c7a;
+      --bg:#0b1220;
+      --panel:#0f1a31;
+      --card:#111f3b;
+      --text:#eaf1ff;
+      --muted:#b9c7ee;
+      --line:rgba(234,241,255,.14);
+      --shadow:0 18px 55px rgba(0,0,0,.42);
+      --accent:#2f7dff;
+      --accent2:#21d4b4;
       --radius:18px;
+      --radius2:14px;
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(1200px 700px at 20% 10%, #132349 0%, var(--bg) 55%), var(--bg);color:var(--text)}
-    a{color:inherit}
-    .wrap{max-width:980px;margin:0 auto;padding:28px 18px 60px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
-    .brand{font-weight:800;letter-spacing:.2px}
-    .pill{font-size:12px;color:var(--muted);border:1px solid rgba(231,238,252,.18);padding:8px 10px;border-radius:999px;background:rgba(17,26,46,.35)}
-    .hero{display:grid;grid-template-columns:1.25fr .9fr;gap:18px;align-items:stretch}
-    @media (max-width: 860px){.hero{grid-template-columns:1fr}}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));border:1px solid rgba(231,238,252,.14);border-radius:var(--radius);box-shadow:0 20px 50px rgba(0,0,0,.35)}
-    .left{padding:26px}
-    h1{margin:0 0 10px;font-size:44px;line-height:1.05}
-    @media (max-width: 860px){h1{font-size:36px}}
-    .sub{color:var(--muted);font-size:16px;line-height:1.55;margin:0 0 18px}
-    .points{display:grid;gap:10px;margin:18px 0 0;padding:0;list-style:none}
-    .points li{display:flex;gap:10px;align-items:flex-start;color:var(--muted)}
-    .dot{width:10px;height:10px;border-radius:999px;margin-top:7px;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 20% 10%, #132349 0%, var(--bg) 58%),
+        radial-gradient(900px 500px at 90% 20%, rgba(47,125,255,.18) 0%, rgba(0,0,0,0) 60%),
+        var(--bg);
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1120px;margin:0 auto;padding:18px 18px 70px}
 
+    /* Top Nav */
+    .topbar{
+      position:sticky; top:0; z-index:20;
+      backdrop-filter:saturate(140%) blur(10px);
+      background:rgba(11,18,32,.72);
+      border-bottom:1px solid rgba(234,241,255,.08);
+    }
+    .topbar .inner{max-width:1120px;margin:0 auto;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.3px}
+    .logo{
+      width:34px;height:34px;border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      box-shadow:0 12px 30px rgba(47,125,255,.25);
+    }
+    .nav{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+    .nav a{
+      font-size:13px;color:rgba(234,241,255,.92);
+      padding:9px 10px;border-radius:999px;
+      border:1px solid rgba(234,241,255,.08);
+      background:rgba(15,26,49,.35);
+    }
+    .nav a:hover{border-color:rgba(234,241,255,.18)}
+    .call{
+      font-weight:800;
+      border:0 !important;
+      background:linear-gradient(135deg,var(--accent),var(--accent2)) !important;
+      color:#051225 !important;
+    }
+
+    /* Hero */
+    .hero{padding:26px 0 10px}
+    .heroGrid{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:stretch}
+    @media (max-width: 960px){.heroGrid{grid-template-columns:1fr}}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .heroLeft{padding:26px}
+    .kicker{display:inline-flex;gap:8px;align-items:center;font-size:12px;color:rgba(234,241,255,.9);
+      border:1px solid rgba(234,241,255,.12);background:rgba(15,26,49,.5);
+      padding:7px 10px;border-radius:999px;
+    }
+    .kicker b{color:var(--accent2)}
+    h1{margin:14px 0 10px;font-size:44px;line-height:1.05}
+    @media (max-width: 520px){h1{font-size:36px}}
+    .sub{margin:0 0 18px;color:var(--muted);font-size:16px;line-height:1.55}
+
+    .rateStrip{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 0}
+    .ratePill{
+      display:flex;align-items:baseline;gap:8px;
+      padding:10px 12px;border-radius:999px;
+      border:1px solid rgba(234,241,255,.12);
+      background:rgba(15,26,49,.45);
+    }
+    .ratePill .big{font-weight:950;font-size:18px}
+    .ratePill .tiny{font-size:12px;color:rgba(234,241,255,.82)}
+    .rateNote{font-size:12px;color:rgba(185,199,238,.95);margin-top:10px}
+
+    .loanTypes{margin-top:18px}
+    .loanTypes h2{margin:0 0 10px;font-size:16px}
+    .typeRow{display:flex;flex-wrap:wrap;gap:10px}
+    .typeBtn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 12px;border-radius:999px;
+      border:1px solid rgba(234,241,255,.14);
+      background:rgba(17,31,59,.55);
+      font-size:13px;font-weight:700;color:rgba(234,241,255,.95);
+      cursor:pointer;
+    }
+    .typeBtn[aria-pressed="true"]{
+      border-color:rgba(33,212,180,.55);
+      box-shadow:0 0 0 4px rgba(33,212,180,.10);
+    }
+
+    /* Form */
     .form{padding:22px}
     .form h2{margin:0 0 6px;font-size:18px}
     .form p{margin:0 0 14px;color:var(--muted);font-size:13px;line-height:1.45}
-    label{display:block;font-size:12px;color:var(--muted);margin:10px 0 6px}
-    input, select, textarea{width:100%;padding:12px 12px;border-radius:12px;border:1px solid rgba(231,238,252,.16);background:rgba(17,26,46,.6);color:var(--text);outline:none}
-    input:focus, select:focus, textarea:focus{border-color:rgba(74,163,255,.55);box-shadow:0 0 0 4px rgba(74,163,255,.12)}
+
+    label{display:block;font-size:12px;color:rgba(234,241,255,.82);margin:10px 0 6px}
+    input, select, textarea{
+      width:100%;padding:12px 12px;border-radius:12px;
+      border:1px solid rgba(234,241,255,.16);
+      background:rgba(15,26,49,.65);
+      color:var(--text);
+      outline:none;
+    }
+    input:focus, select:focus, textarea:focus{border-color:rgba(47,125,255,.6);box-shadow:0 0 0 4px rgba(47,125,255,.14)}
     .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
     @media (max-width: 520px){.row{grid-template-columns:1fr}}
-    .btn{margin-top:14px;width:100%;padding:12px 14px;border-radius:12px;border:0;background:linear-gradient(135deg,var(--accent),var(--accent2));font-weight:800;color:#04101b;cursor:pointer}
-    .fine{margin-top:10px;font-size:11px;color:rgba(181,196,230,.9);line-height:1.45}
-    footer{margin-top:18px;color:rgba(181,196,230,.85);font-size:12px;line-height:1.5}
-    .mini{opacity:.9}
+
+    .btn{
+      margin-top:14px;width:100%;padding:12px 14px;
+      border-radius:12px;border:0;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      font-weight:900;color:#04101b;cursor:pointer;
+    }
+    .fine{margin-top:10px;font-size:11px;color:rgba(185,199,238,.92);line-height:1.45}
+
+    /* Lenders */
+    .section{margin-top:22px}
+    .sectionTitle{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 0 10px}
+    .sectionTitle h2{margin:0;font-size:16px}
+    .sectionTitle .hint{color:var(--muted);font-size:12px}
+
+    .logos{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+    @media (max-width: 960px){.logos{grid-template-columns:repeat(3,1fr)}}
+    @media (max-width: 520px){.logos{grid-template-columns:repeat(2,1fr)}}
+    .logoCard{padding:12px;border-radius:14px;border:1px dashed rgba(234,241,255,.18);background:rgba(15,26,49,.35);text-align:center;font-weight:800;font-size:12px;color:rgba(234,241,255,.85)}
+
+    /* Content blocks */
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    @media (max-width: 960px){.grid3{grid-template-columns:1fr}}
+    .info{padding:18px}
+    .info h3{margin:0 0 8px;font-size:14px}
+    .info p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}
+    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .ghost{padding:10px 12px;border-radius:12px;border:1px solid rgba(234,241,255,.16);background:rgba(15,26,49,.4);font-weight:800;font-size:13px}
+
+    /* Footer */
+    footer{margin-top:28px;padding-top:18px;border-top:1px solid rgba(234,241,255,.10);color:rgba(185,199,238,.92);font-size:12px;line-height:1.55}
+    .footGrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px}
+    @media (max-width: 960px){.footGrid{grid-template-columns:1fr}}
+    .footGrid h4{margin:0 0 8px;font-size:13px;color:rgba(234,241,255,.95)}
+    .footGrid a{display:block;padding:6px 0;color:rgba(185,199,238,.92)}
+    .disclosure{margin-top:12px;color:rgba(185,199,238,.88)}
   </style>
 </head>
 <body>
+  <div class="topbar">
+    <div class="inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>FreeRatesUpdate.com</div>
+      </div>
+      <div class="nav" role="navigation" aria-label="Primary">
+        <a href="#loan-types">Loan Types</a>
+        <a href="/mortgage-rates.html">Mortgage Rates</a>
+        <a href="/contact.html">Contact</a>
+        <a class="call" href="#quote">Request a Quote</a>
+      </div>
+    </div>
+  </div>
+
   <div class="wrap">
-    <header>
-      <div class="brand">FreeRatesUpdate.com</div>
-      <div class="pill">Fast quotes • No pressure</div>
-    </header>
+    <section class="hero" aria-label="Hero">
+      <div class="heroGrid">
+        <div class="card heroLeft">
+          <div class="kicker"><b>New:</b> simple quote request • no pressure</div>
+          <h1>Compare mortgage options in minutes.</h1>
+          <p class="sub">Purchase or refinance. Tell us the basics and we’ll send back rate options that match your goals. No spam — just a clear answer.</p>
 
-    <section class="hero">
-      <div class="card left">
-        <h1>Get today’s mortgage rates — fast.</h1>
-        <p class="sub">Tell us a few details and we’ll send you a personalized rate quote. Purchase or refinance. No spam — just a straight answer.</p>
+          <div class="rateStrip" aria-label="Example rates">
+            <div class="ratePill"><span class="big">4.3%</span><span class="tiny">Rate (example)</span></div>
+            <div class="ratePill"><span class="big">4.7%</span><span class="tiny">APR* Fixed (example)</span></div>
+            <div class="ratePill"><span class="big">15‑yr</span><span class="tiny">cash‑out refi (example)</span></div>
+          </div>
+          <div class="rateNote">*Advertising disclosure: <a href="/advertising-disclosure.html">see details</a>. Rates/APR vary by credit, property, loan amount, and market conditions.</div>
 
-        <ul class="points">
-          <li><span class="dot"></span><span><strong>Quick form</strong> (takes ~60 seconds)</span></li>
-          <li><span class="dot"></span><span><strong>Personalized options</strong> based on your goals</span></li>
-          <li><span class="dot"></span><span><strong>Clear next steps</strong> if it makes sense to move</span></li>
-        </ul>
-
-        <footer>
-          <div class="mini">By submitting, you agree to be contacted about your mortgage inquiry. Standard message/data rates may apply.</div>
-        </footer>
-      </div>
-
-      <div class="card form">
-        <h2>Request a quote</h2>
-        <p>We’ll email you back with current options. If you prefer a call/text, include your phone.</p>
-
-        <form action="https://formspree.io/f/xlglannz" method="POST">
-          <!-- Formspree helpers -->
-          <input type="hidden" name="_subject" value="FreeRatesUpdate Lead" />
-          <input type="hidden" name="_redirect" value="https://freeratesupdate.com/thank-you.html" />
-
-          <div class="row">
-            <div>
-              <label for="name">Full name</label>
-              <input id="name" name="name" autocomplete="name" required />
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required />
+          <div id="loan-types" class="loanTypes">
+            <h2>Choose loan type</h2>
+            <div class="typeRow" role="group" aria-label="Loan types">
+              <button class="typeBtn" type="button" aria-pressed="true" data-purpose="Refinance">Refinance</button>
+              <button class="typeBtn" type="button" aria-pressed="false" data-purpose="Purchase a home">Purchase</button>
+              <button class="typeBtn" type="button" aria-pressed="false" data-purpose="Home equity">Home Equity</button>
+              <button class="typeBtn" type="button" aria-pressed="false" data-purpose="Cash-out refinance">Cash‑out</button>
+              <button class="typeBtn" type="button" aria-pressed="false" data-purpose="Home improvement">Home Improvement</button>
+              <button class="typeBtn" type="button" aria-pressed="false" data-purpose="HELOC">HELOC</button>
             </div>
           </div>
 
-          <div class="row">
-            <div>
-              <label for="phone">Phone (optional)</label>
-              <input id="phone" name="phone" autocomplete="tel" inputmode="tel" />
+          <div class="section">
+            <div class="sectionTitle">
+              <h2>Participating lenders</h2>
+              <div class="hint">(sample list — we’ll refine)</div>
             </div>
-            <div>
-              <label for="purpose">I’m looking to…</label>
-              <select id="purpose" name="purpose" required>
-                <option value="">Select one</option>
-                <option>Purchase a home</option>
-                <option>Refinance</option>
-                <option>Cash-out refinance</option>
-              </select>
+            <div class="logos" aria-label="Lender logos">
+              <div class="logoCard">Rocket</div>
+              <div class="logoCard">AmeriSave</div>
+              <div class="logoCard">loanDepot</div>
+              <div class="logoCard">Local Bank</div>
+              <div class="logoCard">Credit Union</div>
+              <div class="logoCard">Wholesale</div>
             </div>
           </div>
+        </div>
 
-          <label for="credit">Estimated credit score</label>
-          <select id="credit" name="credit" required>
-            <option value="">Select one</option>
-            <option>740+</option>
-            <option>700–739</option>
-            <option>660–699</option>
-            <option>620–659</option>
-            <option>Below 620</option>
-          </select>
+        <div class="card form" id="quote">
+          <h2>Request a quote</h2>
+          <p>We’ll email you back with current options. If you prefer a call/text, include your phone.</p>
 
-          <label for="message">Notes (optional)</label>
-          <textarea id="message" name="message" rows="4" placeholder="Anything helpful: purchase price, current rate, timeline, etc."></textarea>
+          <form action="https://formspree.io/f/xlglannz" method="POST">
+            <input type="hidden" name="_subject" value="FreeRatesUpdate Lead" />
+            <input type="hidden" name="_redirect" value="https://freeratesupdate.com/thank-you.html" />
 
-          <button class="btn" type="submit">Get my rate quote</button>
-          <div class="fine">We do not sell your info. This goes to our team inbox: info@freeratesupdate.com</div>
-        </form>
+            <div class="row">
+              <div>
+                <label for="name">Full name</label>
+                <input id="name" name="name" autocomplete="name" required />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+            </div>
+
+            <div class="row">
+              <div>
+                <label for="phone">Phone (optional)</label>
+                <input id="phone" name="phone" autocomplete="tel" inputmode="tel" />
+              </div>
+              <div>
+                <label for="purpose">I’m looking to…</label>
+                <select id="purpose" name="purpose" required>
+                  <option value="">Select one</option>
+                  <option>Purchase a home</option>
+                  <option>Refinance</option>
+                  <option>Cash-out refinance</option>
+                  <option>Home equity</option>
+                  <option>HELOC</option>
+                  <option>Home improvement</option>
+                </select>
+              </div>
+            </div>
+
+            <label for="credit">Estimated credit score</label>
+            <select id="credit" name="credit" required>
+              <option value="">Select one</option>
+              <option>740+</option>
+              <option>700–739</option>
+              <option>660–699</option>
+              <option>620–659</option>
+              <option>Below 620</option>
+            </select>
+
+            <label for="message">Notes (optional)</label>
+            <textarea id="message" name="message" rows="4" placeholder="Anything helpful: purchase price, current rate, timeline, etc."></textarea>
+
+            <button class="btn" type="submit">Get my rate quote</button>
+            <div class="fine">This message goes to our team inbox. Standard message/data rates may apply if you opt into text/calls.</div>
+          </form>
+        </div>
       </div>
+
+      <div class="section">
+        <div class="sectionTitle">
+          <h2>What you can do here</h2>
+          <div class="hint">simple, fast, and transparent</div>
+        </div>
+        <div class="grid3">
+          <div class="card info">
+            <h3>Lower your rate</h3>
+            <p>If it makes sense, we’ll show options that could reduce your payment or total interest — without the endless back‑and‑forth.</p>
+            <div class="ctaRow"><a class="ghost" href="#quote">Lower my rate</a></div>
+          </div>
+          <div class="card info">
+            <h3>Shorten your term</h3>
+            <p>Compare 30‑year vs 15‑year scenarios and see what your payment looks like at today’s market options.</p>
+            <div class="ctaRow"><a class="ghost" href="#quote">Compare terms</a></div>
+          </div>
+          <div class="card info">
+            <h3>Use home equity</h3>
+            <p>Considering cash‑out or HELOC? We’ll outline tradeoffs, estimated costs, and the clean next step.</p>
+            <div class="ctaRow"><a class="ghost" href="#quote">Explore equity</a></div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footGrid">
+          <div>
+            <h4>FreeRatesUpdate.com</h4>
+            <div class="disclosure">
+              FreeRatesUpdate.com is a marketing lead generator. We may be compensated by third parties for leads or referrals.
+              This site does not provide legal, tax, or financial advice.
+            </div>
+          </div>
+          <div>
+            <h4>Company</h4>
+            <a href="/faq.html">FAQ</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/mortgage-rates.html">Mortgage Rates</a>
+          </div>
+          <div>
+            <h4>Legal</h4>
+            <a href="/advertising-disclosure.html">Advertising Disclosure</a>
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/terms.html">Terms</a>
+          </div>
+        </div>
+        <div class="disclosure" style="margin-top:12px;">
+          © <span id="y"></span> FreeRatesUpdate.com. All rights reserved.
+        </div>
+      </footer>
     </section>
   </div>
+
+  <script>
+    // year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // loan type buttons drive the select
+    const purpose = document.getElementById('purpose');
+    const btns = Array.from(document.querySelectorAll('.typeBtn'));
+    btns.forEach(b => b.addEventListener('click', () => {
+      btns.forEach(x => x.setAttribute('aria-pressed', 'false'));
+      b.setAttribute('aria-pressed','true');
+      const val = b.getAttribute('data-purpose');
+      if (val) {
+        // best-effort match to select
+        const opt = Array.from(purpose.options).find(o => o.textContent.trim() === val);
+        if (opt) purpose.value = opt.textContent.trim();
+      }
+      document.getElementById('quote').scrollIntoView({behavior:'smooth', block:'start'});
+    }));
+  </script>
 </body>
 </html>
