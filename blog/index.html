@@ -87,7 +87,7 @@
     fetch('/blog/posts/index.json', { cache: 'no-store' })
       .then(r => r.ok ? r.json() : Promise.reject())
       .then(data => {
-        const posts = Array.isArray(data?.posts) ? data.posts : [];
+        const posts = (data && Array.isArray(data.posts)) ? data.posts : [];
         const el = document.getElementById('posts');
         if (!el) return;
         if (!posts.length) {
