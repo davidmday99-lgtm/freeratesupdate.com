@@ -245,6 +245,7 @@
       overflow:hidden;
       display:flex;
       gap:12px;
+      -webkit-mask-image:linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
       mask-image:linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
     }
     .reviewsMarquee{
@@ -264,7 +265,7 @@
 
     @media (prefers-reduced-motion: reduce){
       .reviewsMarquee{animation:none}
-      .reviewsTrack{overflow-x:auto;mask-image:none;-webkit-overflow-scrolling:touch}
+      .reviewsTrack{overflow-x:auto;-webkit-mask-image:none;mask-image:none;-webkit-overflow-scrolling:touch}
     }
 
     /* Form */
