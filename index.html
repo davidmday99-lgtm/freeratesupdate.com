@@ -254,7 +254,7 @@
       display:flex;
       gap:12px;
       flex:0 0 auto;
-      animation:reviewsScroll 70s linear infinite;
+      animation:reviewsScroll 120s linear infinite;
     }
     .reviewsMarquee .test{min-width:320px}
     @media (max-width: 520px){.reviewsMarquee .test{min-width:84vw}}
@@ -602,8 +602,8 @@
       .then(r => r.ok ? r.json() : Promise.reject(new Error('reviews.json not found')))
       .then(data => {
         const reviews = Array.isArray(data?.reviews) ? data.reviews : [];
-        // Keep it readable: use first 24 reviews in the scroll
-        renderReviews(reviews.slice(0, 24));
+        // Keep it readable: use first 18 reviews in the scroll
+        renderReviews(reviews.slice(0, 18));
       })
       .catch(() => {
         // fallback to a few hardcoded reviews
