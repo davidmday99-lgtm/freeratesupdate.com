@@ -9,10 +9,10 @@
 
   <style>
     :root{
-      /* Base */
-      --bg:#070a12;
-      --panel:#0f1628;
-      --card:#111b33;
+      /* Base (lightened a bit) */
+      --bg:#0b1220;
+      --panel:#121b31;
+      --card:#141f3b;
       --text:#eef2ff;
       --muted:rgba(238,242,255,.78);
       --line:rgba(238,242,255,.12);
@@ -35,11 +35,11 @@
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
       color:var(--text);
       background:
-        radial-gradient(1100px 650px at 10% 10%, rgba(168,85,247,.22) 0%, rgba(0,0,0,0) 60%),
-        radial-gradient(1000px 600px at 92% 14%, rgba(245,158,11,.18) 0%, rgba(0,0,0,0) 60%),
-        radial-gradient(1100px 650px at 70% 92%, rgba(33,212,180,.12) 0%, rgba(0,0,0,0) 62%),
-        radial-gradient(900px 500px at 25% 70%, rgba(47,125,255,.14) 0%, rgba(0,0,0,0) 60%),
-        linear-gradient(180deg, #070a12 0%, #070a12 60%, #060911 100%);
+        radial-gradient(1100px 650px at 10% 10%, rgba(168,85,247,.16) 0%, rgba(0,0,0,0) 62%),
+        radial-gradient(1000px 600px at 92% 14%, rgba(245,158,11,.13) 0%, rgba(0,0,0,0) 62%),
+        radial-gradient(1100px 650px at 70% 92%, rgba(33,212,180,.10) 0%, rgba(0,0,0,0) 65%),
+        radial-gradient(900px 500px at 25% 70%, rgba(47,125,255,.11) 0%, rgba(0,0,0,0) 64%),
+        linear-gradient(180deg, var(--bg) 0%, #0b1326 55%, #0a1122 100%);
     }
 
     a{color:inherit;text-decoration:none}
@@ -49,8 +49,8 @@
     .topbar{
       position:sticky; top:0; z-index:20;
       backdrop-filter:saturate(140%) blur(12px);
-      background:rgba(7,10,18,.68);
-      border-bottom:1px solid rgba(238,242,255,.08);
+      background:rgba(11,18,32,.66);
+      border-bottom:1px solid rgba(238,242,255,.10);
     }
     .topbar .inner{max-width:1140px;margin:0 auto;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:14px}
     .brand{display:flex;align-items:center;gap:10px;font-weight:950;letter-spacing:.3px}
@@ -304,7 +304,7 @@
         <a href="#loan-types">Loan Types</a>
         <a href="/mortgage-rates.html">Mortgage Rates</a>
         <a href="/contact.html">Contact</a>
-        <a class="call" href="#quote">Request a Quote</a>
+        <a class="call" href="#quote">Get Options</a>
       </div>
     </div>
   </div>
@@ -313,7 +313,7 @@
     <section class="hero" aria-label="Hero">
       <div class="heroGrid">
         <div class="card heroLeft">
-          <div class="kicker"><b>New:</b> simple quote request • no pressure</div>
+          <div class="kicker"><b>New:</b> quick info request • no pressure</div>
           <h1>Compare mortgage options in minutes.</h1>
           <p class="sub">Purchase or refinance. Tell us the basics and we’ll send back rate options that match your goals. No spam — just a clear answer.</p>
 
@@ -331,7 +331,7 @@
                   </div>
                 </div>
                 <div class="rateCTA">
-                  <a class="miniBtn" href="#quote">Get my quote</a>
+                  <a class="miniBtn" href="#quote">Get options</a>
                   <a class="miniBtn" href="/advertising-disclosure.html">APR* details</a>
                 </div>
               </div>
@@ -413,8 +413,11 @@
         </div>
 
         <div class="card form" id="quote">
-          <h2>Request a quote</h2>
-          <p>We’ll email you back with current options. If you prefer a call/text, include your phone.</p>
+          <h2>Request information</h2>
+          <p>Send the basics and we’ll follow up with options. If you prefer a call/text, include your phone.</p>
+          <div class="fine" style="margin-top:8px;">
+            FreeRatesUpdate.com is a marketing lead generator and information service. We are not a lender and we do not offer loan approvals or underwriting decisions through this website. Loan options and rates (if discussed) are provided by licensed mortgage professionals and are subject to borrower qualification and lender guidelines. Do not submit sensitive personal information (SSN, DOB, account numbers) through this form.
+          </div>
 
           <form action="https://formspree.io/f/xlglannz" method="POST">
             <input type="hidden" name="_subject" value="FreeRatesUpdate Lead" />
@@ -450,20 +453,12 @@
               </div>
             </div>
 
-            <label for="credit">Estimated credit score</label>
-            <select id="credit" name="credit" required>
-              <option value="">Select one</option>
-              <option>740+</option>
-              <option>700–739</option>
-              <option>660–699</option>
-              <option>620–659</option>
-              <option>Below 620</option>
-            </select>
-
+            <!-- credit score field removed -->
+<!-- removed -->
             <label for="message">Notes (optional)</label>
             <textarea id="message" name="message" rows="4" placeholder="Anything helpful: purchase price, current rate, timeline, etc."></textarea>
 
-            <button class="btn" type="submit">Get my rate quote</button>
+            <button class="btn" type="submit">Get options</button>
             <div class="fine">This message goes to our team inbox. Standard message/data rates may apply if you opt into text/calls.</div>
           </form>
         </div>
@@ -496,66 +491,12 @@
       <div class="section" aria-label="Testimonials">
         <div class="sectionTitle">
           <h2>Borrowers love how simple this is</h2>
-          <div class="hint">reviews (anonymized) • auto-scroll pauses on hover</div>
+          <div class="hint">reviews • auto-scroll pauses on hover</div>
         </div>
 
         <div class="reviewsTrack" aria-label="Scrolling customer reviews">
-          <div class="reviewsMarquee">
-            <div class="card test">
-              <div class="stars">★★★★★</div>
-              <p class="quote">“Prompt communication, prepared to help get our offer accepted, and we closed early with no interruptions.”</p>
-              <div class="who">Shelby • Stacy, MN — Verified review (anonymized)</div>
-            </div>
-            <div class="card test">
-              <div class="stars">★★★★★</div>
-              <p class="quote">“Everything went very smooth and every question was answered clearly.”</p>
-              <div class="who">Burk • Stacy, MN — Verified review (anonymized)</div>
-            </div>
-            <div class="card test">
-              <div class="stars">★★★★★</div>
-              <p class="quote">“Fast, friendly, and any issues were handled immediately.”</p>
-              <div class="who">Candice • Bethalto, IL — Verified review (anonymized)</div>
-            </div>
-            <div class="card test">
-              <div class="stars">★★★★★</div>
-              <p class="quote">“No pressure. I got clear options and a quick recommendation.”</p>
-              <div class="who">Jordan • O’Fallon, MO — Verified review (anonymized)</div>
-            </div>
-            <div class="card test">
-              <div class="stars">★★★★★</div>
-              <p class="quote">“Answered every question and kept the process moving.”</p>
-              <div class="who">Melissa • St. Peters, MO — Verified review (anonymized)</div>
-            </div>
-          </div>
-
-          <!-- duplicate for seamless loop -->
-          <div class="reviewsMarquee" aria-hidden="true">
-            <div class="card test">
-              <div class="stars">★★★★★</div>
-              <p class="quote">“Prompt communication, prepared to help get our offer accepted, and we closed early with no interruptions.”</p>
-              <div class="who">Shelby • Stacy, MN — Verified review (anonymized)</div>
-            </div>
-            <div class="card test">
-              <div class="stars">★★★★★</div>
-              <p class="quote">“Everything went very smooth and every question was answered clearly.”</p>
-              <div class="who">Burk • Stacy, MN — Verified review (anonymized)</div>
-            </div>
-            <div class="card test">
-              <div class="stars">★★★★★</div>
-              <p class="quote">“Fast, friendly, and any issues were handled immediately.”</p>
-              <div class="who">Candice • Bethalto, IL — Verified review (anonymized)</div>
-            </div>
-            <div class="card test">
-              <div class="stars">★★★★★</div>
-              <p class="quote">“No pressure. I got clear options and a quick recommendation.”</p>
-              <div class="who">Jordan • O’Fallon, MO — Verified review (anonymized)</div>
-            </div>
-            <div class="card test">
-              <div class="stars">★★★★★</div>
-              <p class="quote">“Answered every question and kept the process moving.”</p>
-              <div class="who">Melissa • St. Peters, MO — Verified review (anonymized)</div>
-            </div>
-          </div>
+          <div id="reviewsMarqueeA" class="reviewsMarquee"></div>
+          <div id="reviewsMarqueeB" class="reviewsMarquee" aria-hidden="true"></div>
         </div>
 
         <div class="rateNote" style="margin-top:10px;">Testimonials reflect individual experiences. Results and timelines vary by borrower and lender.</div>
@@ -566,7 +507,7 @@
           <div>
             <h4>FreeRatesUpdate.com</h4>
             <div class="disclosure">
-              FreeRatesUpdate.com is a marketing lead generator. We may be compensated by third parties for leads or referrals.
+              FreeRatesUpdate.com is a marketing lead generator and information service. We are not a lender and we do not offer loan approvals or underwriting decisions through this website. Loan options and rates (if discussed) are provided by licensed mortgage professionals and are subject to borrower qualification and lender guidelines. Do not submit sensitive personal information (SSN, DOB, account numbers) through this form.
               This site does not provide legal, tax, or financial advice.
             </div>
           </div>
