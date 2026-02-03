@@ -1,0 +1,38 @@
+name: Daily blog post
+
+on:
+  schedule:
+    # GitHub cron is UTC. We run twice to cover DST shifts; the script will only post at 7am America/Chicago.
+    - cron: '5 12 * * *'
+    - cron: '5 13 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate blog post (if due)
+        run: node scripts/generate-blog-post.js
+
+      - name: Commit & push (if changed)
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add blog/posts/index.json blog/state.json blog/posts/*.html
+          git commit -m "Add daily blog post"
+          git push
