@@ -216,6 +216,33 @@
     .test:before{content:"";position:absolute;inset:-1px;opacity:.45;background:linear-gradient(135deg, rgba(168,85,247,.20), rgba(33,212,180,.14), rgba(245,158,11,.12));pointer-events:none}
     .test > *{position:relative}
 
+    /* Scrolling reviews (bottom) */
+    .reviewsTrack{
+      overflow:hidden;
+      display:flex;
+      gap:12px;
+      mask-image:linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+    }
+    .reviewsMarquee{
+      display:flex;
+      gap:12px;
+      flex:0 0 auto;
+      animation:reviewsScroll 32s linear infinite;
+    }
+    .reviewsMarquee .test{min-width:320px}
+    @media (max-width: 520px){.reviewsMarquee .test{min-width:84vw}}
+    .reviewsTrack:hover .reviewsMarquee{animation-play-state:paused}
+
+    @keyframes reviewsScroll{
+      from{transform:translateX(0)}
+      to{transform:translateX(calc(-100% - 12px))}
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      .reviewsMarquee{animation:none}
+      .reviewsTrack{overflow-x:auto;mask-image:none;-webkit-overflow-scrolling:touch}
+    }
+
     /* Form */
     .form{padding:22px}
     .form h2{margin:0 0 6px;font-size:18px}
@@ -469,25 +496,68 @@
       <div class="section" aria-label="Testimonials">
         <div class="sectionTitle">
           <h2>Borrowers love how simple this is</h2>
-          <div class="hint">reviews (anonymized)</div>
+          <div class="hint">reviews (anonymized) • auto-scroll pauses on hover</div>
         </div>
-        <div class="testGrid">
-          <div class="card test">
-            <div class="stars">★★★★★</div>
-            <p class="quote">“Prompt communication, prepared to help get our offer accepted, and we closed early with no interruptions.”</p>
-            <div class="who">Shelby • Stacy, MN — Verified review (anonymized)</div>
+
+        <div class="reviewsTrack" aria-label="Scrolling customer reviews">
+          <div class="reviewsMarquee">
+            <div class="card test">
+              <div class="stars">★★★★★</div>
+              <p class="quote">“Prompt communication, prepared to help get our offer accepted, and we closed early with no interruptions.”</p>
+              <div class="who">Shelby • Stacy, MN — Verified review (anonymized)</div>
+            </div>
+            <div class="card test">
+              <div class="stars">★★★★★</div>
+              <p class="quote">“Everything went very smooth and every question was answered clearly.”</p>
+              <div class="who">Burk • Stacy, MN — Verified review (anonymized)</div>
+            </div>
+            <div class="card test">
+              <div class="stars">★★★★★</div>
+              <p class="quote">“Fast, friendly, and any issues were handled immediately.”</p>
+              <div class="who">Candice • Bethalto, IL — Verified review (anonymized)</div>
+            </div>
+            <div class="card test">
+              <div class="stars">★★★★★</div>
+              <p class="quote">“No pressure. I got clear options and a quick recommendation.”</p>
+              <div class="who">Jordan • O’Fallon, MO — Verified review (anonymized)</div>
+            </div>
+            <div class="card test">
+              <div class="stars">★★★★★</div>
+              <p class="quote">“Answered every question and kept the process moving.”</p>
+              <div class="who">Melissa • St. Peters, MO — Verified review (anonymized)</div>
+            </div>
           </div>
-          <div class="card test">
-            <div class="stars">★★★★★</div>
-            <p class="quote">“Everything went very smooth and every question was answered clearly.”</p>
-            <div class="who">Burk • Stacy, MN — Verified review (anonymized)</div>
-          </div>
-          <div class="card test">
-            <div class="stars">★★★★★</div>
-            <p class="quote">“Fast, friendly, and any issues were handled immediately.”</p>
-            <div class="who">Candice • Bethalto, IL — Verified review (anonymized)</div>
+
+          <!-- duplicate for seamless loop -->
+          <div class="reviewsMarquee" aria-hidden="true">
+            <div class="card test">
+              <div class="stars">★★★★★</div>
+              <p class="quote">“Prompt communication, prepared to help get our offer accepted, and we closed early with no interruptions.”</p>
+              <div class="who">Shelby • Stacy, MN — Verified review (anonymized)</div>
+            </div>
+            <div class="card test">
+              <div class="stars">★★★★★</div>
+              <p class="quote">“Everything went very smooth and every question was answered clearly.”</p>
+              <div class="who">Burk • Stacy, MN — Verified review (anonymized)</div>
+            </div>
+            <div class="card test">
+              <div class="stars">★★★★★</div>
+              <p class="quote">“Fast, friendly, and any issues were handled immediately.”</p>
+              <div class="who">Candice • Bethalto, IL — Verified review (anonymized)</div>
+            </div>
+            <div class="card test">
+              <div class="stars">★★★★★</div>
+              <p class="quote">“No pressure. I got clear options and a quick recommendation.”</p>
+              <div class="who">Jordan • O’Fallon, MO — Verified review (anonymized)</div>
+            </div>
+            <div class="card test">
+              <div class="stars">★★★★★</div>
+              <p class="quote">“Answered every question and kept the process moving.”</p>
+              <div class="who">Melissa • St. Peters, MO — Verified review (anonymized)</div>
+            </div>
           </div>
         </div>
+
         <div class="rateNote" style="margin-top:10px;">Testimonials reflect individual experiences. Results and timelines vary by borrower and lender.</div>
       </div>
 
