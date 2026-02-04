@@ -243,16 +243,40 @@ function main() {
     ? JSON.parse(fs.readFileSync(statePath, 'utf8'))
     : { lastPostedDate: null, nextTopicIndex: 0 };
 
-  // Only post around 7:00am Chicago time. (GitHub Actions runs in UTC; we check locally.)
+  // Schedule notes:
+  // GitHub scheduled workflows can run late/early. To keep posting reliable,
+  // we do NOT require an exact 7:00am execution time.
+  // We only enforce:
+  // - never post more than once per day
+  // - post every other day (>= 2 days since last post)
   const force = process.env.FORCE_POST === '1';
-  if (!force && now.hour !== 7) {
-    console.log('Not 7am Chicago time; skipping. Now:', now);
+
+  if (!force && state.lastPostedDate === now.ymd) {
+    console.log('Already posted today; skipping.');
     return;
   }
 
-  if (state.lastPostedDate === now.ymd) {
-    console.log('Already posted today; skipping.');
-    return;
+  const parseYMD = (s) => {
+    if (!s || typeof s !== 'string') return null;
+    const m = s.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (!m) return null;
+    const y = Number(m[1]);
+    const mo = Number(m[2]);
+    const d = Number(m[3]);
+    // Use UTC to avoid DST/timezone edge cases.
+    return new Date(Date.UTC(y, mo - 1, d));
+  };
+
+  if (!force && state.lastPostedDate) {
+    const last = parseYMD(state.lastPostedDate);
+    const today = parseYMD(now.ymd);
+    if (last && today) {
+      const days = Math.floor((today.getTime() - last.getTime()) / (24 * 60 * 60 * 1000));
+      if (days < 2) {
+        console.log('Every-other-day rule: last post was', state.lastPostedDate, 'so skipping today', now.ymd);
+        return;
+      }
+    }
   }
 
   const topic = TOPICS[state.nextTopicIndex % TOPICS.length];
