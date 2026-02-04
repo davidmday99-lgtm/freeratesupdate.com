@@ -267,17 +267,7 @@ function main() {
     return new Date(Date.UTC(y, mo - 1, d));
   };
 
-  if (!force && state.lastPostedDate) {
-    const last = parseYMD(state.lastPostedDate);
-    const today = parseYMD(now.ymd);
-    if (last && today) {
-      const days = Math.floor((today.getTime() - last.getTime()) / (24 * 60 * 60 * 1000));
-      if (days < 2) {
-        console.log('Every-other-day rule: last post was', state.lastPostedDate, 'so skipping today', now.ymd);
-        return;
-      }
-    }
-  }
+  // Daily posting (no every-other-day gating). We only prevent duplicates on the same day.
 
   const topic = TOPICS[state.nextTopicIndex % TOPICS.length];
   const slug = slugify(topic.title);
