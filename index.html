@@ -272,7 +272,8 @@
     }
     .reviewsMarquee .test{min-width:320px}
     @media (max-width: 520px){.reviewsMarquee .test{min-width:84vw}}
-    .reviewsTrack:hover .reviewsMarquee{animation-play-state:paused}
+    /* Do not pause on hover */
+    .reviewsTrack:hover .reviewsMarquee{animation-play-state:running}
 
     @keyframes reviewsScroll{
       from{transform:translateX(0)}
