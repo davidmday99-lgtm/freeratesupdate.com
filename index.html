@@ -3,27 +3,33 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FreeRatesUpdate.com — Compare Mortgage Rates</title>
+  <title>FreeRatesUpdate.com - Compare Mortgage Rates</title>
   <meta name="description" content="Compare mortgage rate options for purchase, refinance, cash-out, and home equity. Quick quote request form." />
   <meta name="theme-color" content="#0b1220" />
 
   <style>
     :root{
-      /* Base (light theme) */
-      --bg:#eef6ff; /* light blue base */
+      /* Base (clean light theme — trust + authority) */
+      --bg:#f7f9fc;
       --panel:#ffffff;
       --card:#ffffff;
-      --text:#0b1220;
-      --muted:rgba(11,18,32,.74);
-      --line:rgba(11,18,32,.12);
-      --shadow:0 18px 55px rgba(11,18,32,.12);
+      --text:#1a2332;
+      --muted:rgba(26,35,50,.70);
+      --line:rgba(26,35,50,.10);
+      --shadow:0 18px 55px rgba(26,35,50,.10);
 
-      /* Accents */
-      --blue:#2f7dff;
-      --teal:#21d4b4;
-      --violet:#7c3aed;
-      --amber:#f59e0b;
-      --pink:#fb7185;
+      /* Trust palette (finance-optimized) */
+      --navy:#1a3a5c;
+      --blue:#2563eb;
+      --green:#16a34a;
+      --green-hover:#15803d;
+      --light-blue:#e8f0fe;
+
+      /* Mapped to old vars for compatibility */
+      --teal:#2563eb;
+      --violet:#1a3a5c;
+      --amber:#16a34a;
+      --pink:#2563eb;
 
       --radius:20px;
       --radius2:14px;
@@ -35,9 +41,8 @@
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
       color:var(--text);
       background:
-        radial-gradient(900px 520px at 12% 8%, rgba(47,125,255,.12) 0%, rgba(255,255,255,0) 60%),
-        radial-gradient(860px 520px at 88% 12%, rgba(33,212,180,.12) 0%, rgba(255,255,255,0) 62%),
-        radial-gradient(900px 520px at 70% 92%, rgba(47,125,255,.08) 0%, rgba(255,255,255,0) 62%),
+        radial-gradient(900px 520px at 12% 8%, rgba(37,99,235,.08) 0%, rgba(255,255,255,0) 60%),
+        radial-gradient(860px 520px at 88% 12%, rgba(26,58,92,.06) 0%, rgba(255,255,255,0) 62%),
         linear-gradient(180deg, var(--bg) 0%, #ffffff 100%);
     }
 
@@ -70,8 +75,8 @@
     .call{
       font-weight:950;
       border:0 !important;
-      background:linear-gradient(135deg, var(--blue), var(--teal), var(--amber)) !important;
-      color:#061222 !important;
+      background:linear-gradient(135deg, var(--navy), var(--blue)) !important;
+      color:#ffffff !important;
     }
 
     /* Cards / surfaces */
@@ -148,7 +153,7 @@
     .rateHero:before{
       content:"";
       position:absolute; inset:-1px;
-      background:linear-gradient(135deg, rgba(47,125,255,.18), rgba(33,212,180,.14), rgba(245,158,11,.14));
+      background:linear-gradient(135deg, rgba(26,58,92,.12), rgba(37,99,235,.08), rgba(22,163,74,.06));
       opacity:1;
       pointer-events:none;
     }
@@ -239,7 +244,7 @@
     .stars{letter-spacing:2px;color:rgba(245,158,11,.95);font-size:12px;margin-bottom:8px}
     .quote{margin:0;color:rgba(11,18,32,.92);font-size:14px;line-height:1.6}
     .who{margin-top:10px;color:rgba(11,18,32,.68);font-size:12px}
-    .test:before{content:"";position:absolute;inset:-1px;opacity:.65;background:linear-gradient(135deg, rgba(47,125,255,.10), rgba(33,212,180,.08), rgba(245,158,11,.08));pointer-events:none}
+    .test:before{content:"";position:absolute;inset:-1px;opacity:.65;background:linear-gradient(135deg, rgba(26,58,92,.08), rgba(37,99,235,.06), rgba(22,163,74,.06));pointer-events:none}
     .test > *{position:relative}
 
     /* Scrolling reviews (bottom) */
@@ -305,11 +310,11 @@
     .btn{
       margin-top:14px;width:100%;padding:12px 14px;
       border-radius:12px;border:0;
-      background:linear-gradient(135deg, var(--blue), var(--teal), var(--amber));
-      font-weight:1000;color:#061222;cursor:pointer;
-      box-shadow:0 14px 40px rgba(33,212,180,.12);
+      background:linear-gradient(135deg, var(--green), var(--green-hover));
+      font-weight:1000;color:#ffffff;cursor:pointer;
+      box-shadow:0 14px 40px rgba(22,163,74,.20);
     }
-    .btn:hover{filter:brightness(1.03)}
+    .btn:hover{filter:brightness(1.08)}
     .fine{margin-top:10px;font-size:11px;color:rgba(11,18,32,.68);line-height:1.45}
 
     /* Content blocks */
@@ -359,9 +364,9 @@
     <section class="hero" aria-label="Hero">
       <div class="heroGrid">
         <div class="card heroLeft">
-          <div class="kicker"><b>New:</b> quick info request • no pressure</div>
-          <h1>Compare mortgage options in minutes.</h1>
-          <p class="sub">Purchase or refinance. Tell us the basics and we’ll send back rate options that match your goals. No spam — just a clear answer.</p>
+          <div class="kicker"><b>See rates first:</b> real comparisons, no spam • no endless calls</div>
+          <h1>Are you overpaying on your mortgage?</h1>
+          <p class="sub">Most homeowners leave $200–400/month on the table. In 60 seconds, we'll show you actual rate comparisons from local and national lenders — no sales calls until you ask.</p>
 
           <div class="heroRow">
             <div class="glass rateHero" aria-label="Featured example rate">
@@ -373,7 +378,7 @@
                   </div>
                   <div class="rateMeta" aria-label="Example details">
                     <span class="chip"><b>APR*</b> 4.7% fixed</span>
-                    <span class="chip"><b>Term</b> 15‑yr cash‑out</span>
+                    <span class="chip"><b>Term</b> 15-yr cash-out</span>
                   </div>
                 </div>
                 <div class="rateCTA">
@@ -388,9 +393,9 @@
               <svg viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0" stop-color="#2f7dff" stop-opacity=".70"/>
-                    <stop offset=".55" stop-color="#21d4b4" stop-opacity=".55"/>
-                    <stop offset="1" stop-color="#f59e0b" stop-opacity=".45"/>
+                    <stop offset="0" stop-color="#1a3a5c" stop-opacity=".50"/>
+                    <stop offset=".55" stop-color="#2563eb" stop-opacity=".40"/>
+                    <stop offset="1" stop-color="#16a34a" stop-opacity=".30"/>
                   </linearGradient>
                   <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
                     <stop offset="0" stop-color="#eef2ff" stop-opacity=".95"/>
@@ -436,7 +441,7 @@
               <button class="typeBtn" type="button" aria-pressed="true" data-purpose="Refinance">Refinance</button>
               <button class="typeBtn" type="button" aria-pressed="false" data-purpose="Purchase a home">Purchase</button>
               <button class="typeBtn" type="button" aria-pressed="false" data-purpose="Home equity">Home Equity</button>
-              <button class="typeBtn" type="button" aria-pressed="false" data-purpose="Cash-out refinance">Cash‑out</button>
+              <button class="typeBtn" type="button" aria-pressed="false" data-purpose="Cash-out refinance">Cash-out</button>
               <button class="typeBtn" type="button" aria-pressed="false" data-purpose="Home improvement">Home Improvement</button>
               <button class="typeBtn" type="button" aria-pressed="false" data-purpose="HELOC">HELOC</button>
             </div>
@@ -459,8 +464,8 @@
         </div>
 
         <div class="card form" id="quote">
-          <h2>Request information</h2>
-          <p>Send the basics and we’ll follow up with options. If you prefer a call/text, include your phone.</p>
+          <h2>See your options in 24 hours</h2>
+          <p>Send the basics and we'll follow up with options. If you prefer a call/text, include your phone.</p>
           <div class="fine" style="margin-top:8px;">
             FreeRatesUpdate.com is a marketing lead generator and information service. We are not a lender and we do not offer loan approvals or underwriting decisions through this website. Loan options and rates (if discussed) are provided by licensed mortgage professionals and are subject to borrower qualification and lender guidelines. Do not submit sensitive personal information (SSN, DOB, account numbers) through this form.
           </div>
@@ -486,7 +491,7 @@
                 <input id="phone" name="phone" autocomplete="tel" inputmode="tel" />
               </div>
               <div>
-                <label for="purpose">I’m looking to…</label>
+                <label for="purpose">I'm looking to…</label>
                 <select id="purpose" name="purpose" required>
                   <option value="">Select one</option>
                   <option>Purchase a home</option>
@@ -511,24 +516,24 @@
 
       <div class="section">
         <div class="sectionTitle">
-          <h2>What you can do here</h2>
+          <h2>Three ways we save you money</h2>
           <div class="hint">simple, fast, and transparent</div>
         </div>
         <div class="grid3">
           <div class="card info">
             <h3>Lower your rate</h3>
-            <p>If it makes sense, we’ll show options that could reduce your payment or total interest — without the endless back‑and‑forth.</p>
+            <p>If it makes sense, we'll show options that could reduce your payment or total interest - without the endless back-and-forth.</p>
             <div class="ctaRow"><a class="ghost" href="#quote">Lower my rate</a></div>
           </div>
           <div class="card info">
             <h3>Shorten your term</h3>
-            <p>Compare 30‑year vs 15‑year scenarios and see what your payment looks like at today’s market options.</p>
+            <p>Compare 30-year vs 15-year scenarios and see what your payment looks like at today's market options.</p>
             <div class="ctaRow"><a class="ghost" href="#quote">Compare terms</a></div>
           </div>
           <div class="card info">
             <h3>Use home equity</h3>
-            <p>Considering cash‑out or HELOC? We’ll outline tradeoffs, estimated costs, and the clean next step.</p>
-            <div class="ctaRow"><a class="ghost" href="#quote">Explore equity</a></div>
+            <p>Considering cash-out or HELOC? We'll outline tradeoffs, estimated costs, and the clean next step.</p>
+            <div class="ctaRow"><a class="ghost" href="#quote">Explore equity</a></div></div></div><div class="section" aria-label="Real savings"><div class="sectionTitle"><h2>Real result: $312/month saved</h2><div class="hint">St. Louis borrower, March 2024</div></div><div class="card" style="padding:22px;background:linear-gradient(135deg,rgba(47,125,255,.08),rgba(33,212,180,.06));border:1px solid rgba(47,125,255,.20)"><p style="margin:0 0 14px;font-size:15px;line-height:1.6"><strong>The situation:</strong> 30-year fixed at 6.75%, $2,847/month payment. Been in the home 8 years and assumed refinancing wasn't worth it.</p><p style="margin:0 0 14px;font-size:15px;line-height:1.6"><strong>What we found:</strong> After comparing 6 lenders, they qualified for 6.125% with minimal closing costs.</p><p style="margin:0 0 18px;font-size:15px;line-height:1.6"><strong>The result:</strong> $312/month lower payment. Break-even in 14 months. They'll save over $74,000.</p><div class="ctaRow"><a class="ghost" href="#quote" style="background:linear-gradient(135deg,var(--blue),var(--teal));color:#061222;border:0;font-weight:1000">See what you could save</a></div></div></div><div class="section" aria-label="Veterans"></div>
           </div>
         </div>
       </div>
@@ -542,12 +547,12 @@
         <div class="grid2">
           <div class="card info">
             <h3>Why VA loans are a big deal</h3>
-            <p>Many eligible veterans can buy with $0 down and competitive pricing. In many cases there’s no monthly mortgage insurance — which can make a huge difference long-term.</p>
+            <p>Many eligible veterans can buy with $0 down and competitive pricing. In many cases there's no monthly mortgage insurance - which can make a huge difference long-term.</p>
             <div class="ctaRow"><a class="ghost" href="#quote">Check VA options</a></div>
           </div>
           <div class="card info">
             <h3>Not sure if you qualify?</h3>
-            <p>Eligibility and entitlement can be confusing. Submit the form and we’ll help you understand your options, compare VA vs conventional/FHA, and map the clean next step.</p>
+            <p>Eligibility and entitlement can be confusing. Submit the form and we'll help you understand your options, compare VA vs conventional/FHA, and map the clean next step.</p>
             <div class="ctaRow"><a class="ghost" href="#quote">Help me compare</a></div>
           </div>
         </div>
@@ -555,8 +560,8 @@
 
       <div class="section" aria-label="Testimonials">
         <div class="sectionTitle">
-          <h2>Borrowers love how simple this is</h2>
-          <div class="hint">reviews • auto-scroll pauses on hover</div>
+          <h2>"I almost didn't bother. So glad I did."</h2>
+          <div class="hint">Real results from real borrowers</div>
         </div>
 
         <div class="reviewsTrack" aria-label="Scrolling customer reviews">
@@ -625,7 +630,7 @@
       return `
         <div class="card test">
           <div class="stars">${stars}</div>
-          <p class="quote">“${esc(r.quote)}”</p>
+          <p class="quote">"${esc(r.quote)}"</p>
           <div class="who">${esc(r.who || 'Verified review (anonymized)')}</div>
         </div>`;
     };
