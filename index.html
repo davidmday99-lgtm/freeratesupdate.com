@@ -286,7 +286,10 @@
       gap:12px;
       flex:0 0 auto;
       animation:reviewsScroll 240s linear infinite;
+      /* Start paused; JS removes this once reviews load */
+      animation-play-state:paused;
     }
+    .reviewsMarquee.ready{animation-play-state:running}
     .reviewsMarquee .test{min-width:320px}
     @media (max-width: 520px){.reviewsMarquee .test{min-width:84vw}}
     /* Do not pause on hover */
@@ -652,6 +655,11 @@
       const html = reviews.map(cardHtml).join('');
       marqueeA.innerHTML = html;
       marqueeB.innerHTML = html;
+      // Start scrolling only after content is rendered (fixes Safari delay)
+      requestAnimationFrame(() => {
+        marqueeA.classList.add('ready');
+        marqueeB.classList.add('ready');
+      });
     };
 
     fetch('/reviews.json', { cache: 'no-store' })
