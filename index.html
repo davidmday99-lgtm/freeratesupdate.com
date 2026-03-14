@@ -252,11 +252,11 @@
     /* Testimonials */
     .testGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
     @media (max-width: 960px){.testGrid{grid-template-columns:1fr}}
-    .test{padding:18px;position:relative;overflow:hidden}
-    .stars{letter-spacing:2px;color:rgba(245,158,11,.95);font-size:12px;margin-bottom:8px}
-    .quote{margin:0;color:rgba(11,18,32,.92);font-size:14px;line-height:1.6}
-    .who{margin-top:10px;color:rgba(11,18,32,.68);font-size:12px}
-    .test:before{content:"";position:absolute;inset:-1px;opacity:.8;background:linear-gradient(135deg, rgba(37,99,235,.10), rgba(26,58,92,.08), rgba(22,163,74,.08));pointer-events:none}
+    .test{padding:18px;position:relative;overflow:hidden;border:1px solid rgba(26,35,50,.10);border-radius:14px;background:#fff;box-shadow:0 4px 16px rgba(26,35,50,.08)}
+    .stars{letter-spacing:2px;color:#f59e0b;font-size:13px;margin-bottom:8px}
+    .quote{margin:0;color:#1a2332;font-size:14px;line-height:1.6}
+    .who{margin-top:10px;color:rgba(26,35,50,.60);font-size:12px}
+    .test:before{display:none}
     .test > *{position:relative}
 
     /* Scrolling reviews (bottom) */
