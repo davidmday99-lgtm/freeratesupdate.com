@@ -1,6 +1,12 @@
 {
   "posts": [
     {
+      "title": "Refinance basics: when it makes sense (and when it doesn’t)",
+      "date": "Sunday, April 5, 2026",
+      "author": "Michael Miller",
+      "url": "/blog/posts/2026-04-05-refinance-basics-when-it-makes-sense-and-when-it-doesnt.html"
+    },
+    {
       "title": "Buying a home: what matters most in your mortgage options",
       "date": "Saturday, April 4, 2026",
       "author": "Michael Miller",
@@ -353,12 +359,6 @@
       "date": "Thursday, February 5, 2026",
       "author": "Michael Miller",
       "url": "/blog/posts/2026-02-05-cash-out-refinance-benefits-risks-and-the-right-reasons-to-use-it.html"
-    },
-    {
-      "title": "Refinance basics: when it makes sense (and when it doesn’t)",
-      "date": "Wednesday, February 4, 2026",
-      "author": "Michael Miller",
-      "url": "/blog/posts/2026-02-04-refinance-basics-when-it-makes-sense-and-when-it-doesnt.html"
     }
   ]
 }
