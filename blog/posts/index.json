@@ -1,6 +1,12 @@
 {
   "posts": [
     {
+      "title": "Cash-out refinance: benefits, risks, and the “right” reasons to use it",
+      "date": "Monday, April 6, 2026",
+      "author": "Michael Miller",
+      "url": "/blog/posts/2026-04-06-cash-out-refinance-benefits-risks-and-the-right-reasons-to-use-it.html"
+    },
+    {
       "title": "Refinance basics: when it makes sense (and when it doesn’t)",
       "date": "Sunday, April 5, 2026",
       "author": "Michael Miller",
@@ -353,12 +359,6 @@
       "date": "Friday, February 6, 2026",
       "author": "Michael Miller",
       "url": "/blog/posts/2026-02-06-blended-rates-a-smarter-way-to-look-at-your-total-debt-cost.html"
-    },
-    {
-      "title": "Cash-out refinance: benefits, risks, and the “right” reasons to use it",
-      "date": "Thursday, February 5, 2026",
-      "author": "Michael Miller",
-      "url": "/blog/posts/2026-02-05-cash-out-refinance-benefits-risks-and-the-right-reasons-to-use-it.html"
     }
   ]
 }
