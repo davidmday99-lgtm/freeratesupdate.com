@@ -1,6 +1,12 @@
 {
   "posts": [
     {
+      "title": "Blended rates: a smarter way to look at your total debt cost",
+      "date": "Tuesday, April 7, 2026",
+      "author": "Michael Miller",
+      "url": "/blog/posts/2026-04-07-blended-rates-a-smarter-way-to-look-at-your-total-debt-cost.html"
+    },
+    {
       "title": "Cash-out refinance: benefits, risks, and the “right” reasons to use it",
       "date": "Monday, April 6, 2026",
       "author": "Michael Miller",
@@ -353,12 +359,6 @@
       "date": "Saturday, February 7, 2026",
       "author": "Michael Miller",
       "url": "/blog/posts/2026-02-07-shortening-your-mortgage-term-without-feeling-the-full-payment-jump.html"
-    },
-    {
-      "title": "Blended rates: a smarter way to look at your total debt cost",
-      "date": "Friday, February 6, 2026",
-      "author": "Michael Miller",
-      "url": "/blog/posts/2026-02-06-blended-rates-a-smarter-way-to-look-at-your-total-debt-cost.html"
     }
   ]
 }
