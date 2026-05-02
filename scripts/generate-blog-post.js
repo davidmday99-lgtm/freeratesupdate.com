@@ -22,9 +22,9 @@ const TOPICS = [
   },
   {
     tag: 'Refinance',
-    title: 'Refinance basics: when it makes sense (and when it doesn’t)',
+    title: 'Refinance basics: when it makes sense (and when it doesn't)',
     outline: [
-      'Lower rate isn’t the only win—payment, term, and total cost matter.',
+      'Lower rate isn't the only win-payment, term, and total cost matter.',
       'Run a break-even: how long until savings cover closing costs?',
       'Consider term changes (30→15, or 30→20) to build equity faster.',
       'Keep your goals simple: lower payment, pay off faster, or access cash.'
@@ -32,7 +32,7 @@ const TOPICS = [
   },
   {
     tag: 'Cash-out',
-    title: 'Cash-out refinance: benefits, risks, and the “right” reasons to use it',
+    title: 'Cash-out refinance: benefits, risks, and the \u201Cright\u201D reasons to use it',
     outline: [
       'Good use cases: debt consolidation, home improvements, emergency reserves.',
       'Avoid turning short-term spending into long-term debt.',
@@ -45,16 +45,16 @@ const TOPICS = [
     title: 'Blended rates: a smarter way to look at your total debt cost',
     outline: [
       'Your mortgage rate may be low while your overall debt is expensive.',
-      'A blended rate looks at all debts together—cards, auto, personal loans, mortgage.',
+      'A blended rate looks at all debts together-cards, auto, personal loans, mortgage.',
       'The goal: reduce total interest and free monthly cash flow.',
       'Use it to evaluate debt consolidation strategies.'
     ]
   },
   {
     tag: 'Term',
-    title: 'Shortening your mortgage term without “feeling” the full payment jump',
+    title: 'Shortening your mortgage term without \u201Cfeeling\u201D the full payment jump',
     outline: [
-      'Compare 30-year vs 15-year vs “paying extra” on a 30-year.',
+      'Compare 30-year vs 15-year vs "paying extra" on a 30-year.',
       'Even small extra principal payments can shave years off.',
       'Ask for amortization comparisons (total interest + payoff date).',
       'Pick a plan you can stick to through life changes.'
@@ -62,10 +62,10 @@ const TOPICS = [
   },
   {
     tag: 'Skip a Payment',
-    title: 'Can you “skip” a mortgage payment with a refinance?',
+    title: 'Can you \u201Cskip\u201D a mortgage payment with a refinance?',
     outline: [
       'Sometimes you can close before the next payment is due and create short-term cash flow.',
-      'It’s not free money—interest accrues and costs roll into the loan.',
+      'It's not free money-interest accrues and costs roll into the loan.',
       'Use it strategically (buffer savings, planned expenses), not as a habit.',
       'Always request a clear payoff + closing timeline explanation.'
     ]
@@ -76,15 +76,15 @@ const TOPICS = [
     outline: [
       'Some conventional loans may allow waivers based on data and borrower profile.',
       'A waiver can save time and simplify the process.',
-      'Not everyone qualifies—property type and scenario matter.',
+      'Not everyone qualifies-property type and scenario matter.',
       'Ask early so you can plan your closing timeline.'
     ]
   },
   {
     tag: 'FHA',
-    title: 'FHA loans: who they’re for and why they can be powerful',
+    title: 'FHA loans: who they're for and why they can be powerful',
     outline: [
-      'FHA is designed to expand access—lower down payment, flexible guidelines.',
+      'FHA is designed to expand access-lower down payment, flexible guidelines.',
       'Mortgage insurance matters: know the costs and how long it lasts.',
       'Great for first-time buyers and rebuilders (depending on full profile).',
       'Have a plan for the future: refinance options if it benefits you later.'
@@ -106,8 +106,8 @@ const TOPICS = [
     outline: [
       'Often no down payment required and competitive pricing.',
       'No monthly mortgage insurance (in many cases) is a big long-term win.',
-      'Eligibility and entitlement can be confusing—get clarity early.',
-      'If you’re a veteran, ask specifically for VA comparisons.'
+      'Eligibility and entitlement can be confusing-get clarity early.',
+      'If you're a veteran, ask specifically for VA comparisons.'
     ]
   }
 ];
@@ -160,7 +160,7 @@ function renderPost({ title, dateLabel, author, bodyHtml }) {
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>${htmlEscape(title)} — FreeRatesUpdate.com</title>
+  <title>${htmlEscape(title)} - FreeRatesUpdate.com</title>
   <meta name="description" content="${htmlEscape(title)}" />
   <meta name="theme-color" content="#eef6ff" />
   <style>
@@ -235,9 +235,9 @@ function renderPost({ title, dateLabel, author, bodyHtml }) {
 function buildBody(topic) {
   const bullets = topic.outline.map(x => `<li>${htmlEscape(x)}</li>`).join('');
   return `
-    <p>${htmlEscape('Here’s a quick, plain-English breakdown.')} </p>
+    <p>${htmlEscape('Here's a quick, plain-English breakdown.')} </p>
     <ul>${bullets}</ul>
-    <p>${htmlEscape('If you want, request information and we’ll help you compare your next best step.')}</p>
+    <p>${htmlEscape('If you want, request information and we'll help you compare your next best step.')}</p>
   `;
 }
 
