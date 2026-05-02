@@ -1,6 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 
+// Strip UTF-8 BOM if present before JSON.parse
+function readJSON(filePath) {
+  let text = fs.readFileSync(filePath, 'utf8');
+  if (text.charCodeAt(0) === 0xFEFF) text = text.slice(1);
+  return JSON.parse(text);
+}
+
 // Topics: alternate purchase/refi-ish themes, plus the specific items you listed.
 const TOPICS = [
   {
@@ -240,7 +247,7 @@ function main() {
   const indexPath = path.join('blog', 'posts', 'index.json');
 
   const state = fs.existsSync(statePath)
-    ? JSON.parse(fs.readFileSync(statePath, 'utf8'))
+    ? readJSON(statePath)
     : { lastPostedDate: null, nextTopicIndex: 0 };
 
   // Schedule notes:
@@ -289,7 +296,7 @@ function main() {
   fs.writeFileSync(outPath, html);
 
   // Update index
-  const idx = fs.existsSync(indexPath) ? JSON.parse(fs.readFileSync(indexPath, 'utf8')) : { posts: [] };
+  const idx = fs.existsSync(indexPath) ? readJSON(indexPath) : { posts: [] };
   idx.posts = Array.isArray(idx.posts) ? idx.posts : [];
   idx.posts.unshift({
     title: topic.title,
