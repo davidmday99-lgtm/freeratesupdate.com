@@ -3,32 +3,304 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mortgage Rates — FreeRatesUpdate.com</title>
-  <meta name="description" content="Mortgage rates overview" />
+  <title>Today's Mortgage Rates — FreeRatesUpdate.com</title>
+  <meta name="description" content="Current mortgage rates for 30-year fixed, 15-year fixed, FHA, VA, and jumbo loans. Updated daily with rate trends and calculators." />
+  <meta name="theme-color" content="#0b1a3b" />
   <style>
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#0b1220;color:#eaf1ff}
-    a{color:#7fe7d3}
-    .wrap{max-width:980px;margin:0 auto;padding:28px 18px}
-    .card{background:rgba(255,255,255,.04);border:1px solid rgba(234,241,255,.14);border-radius:16px;padding:18px}
-    h1{margin:0 0 10px}
-    p{color:rgba(185,199,238,.95);line-height:1.6}
-    ul{color:rgba(185,199,238,.95);line-height:1.8}
+    :root {
+      --bg: #f4f7ff;
+      --navy: #0b1a3b;
+      --blue: #2563eb;
+      --blue-light: #dbeafe;
+      --teal: #0ea5e9;
+      --green: #16a34a;
+      --card: #ffffff;
+      --text: #0b1220;
+      --muted: rgba(11,18,32,.65);
+      --line: rgba(11,18,32,.10);
+      --shadow: 0 4px 24px rgba(11,18,50,.08);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* Nav */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto;
+      padding: 12px 20px;
+      display: flex; flex-direction: column; align-items: center;
+      gap: 6px;
+    }
+    .brand { display: flex; align-items: center; }
+    .logo { height: 100px; width: auto; }
+    .nav-links {
+      display: flex; align-items: center; justify-content: center; gap: 20px;
+    }
+    .nav-links a {
+      font-size: 0.95rem; font-weight: 700; color: var(--muted);
+      padding: 8px 14px; border-radius: 10px; transition: all .2s;
+      text-decoration: none;
+    }
+    .nav-links a:hover { color: var(--text); background: rgba(15,23,36,.05); }
+    .nav-links a.active { color: var(--blue); background: rgba(37,99,235,.08); }
+    @media (max-width: 768px) {
+      .logo { height: 80px; }
+      .nav-links { flex-wrap: wrap; gap: 6px; }
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #1e3a8a 60%, #0c4a6e 100%);
+      padding: 60px 20px 50px; text-align: center;
+    }
+    .hero-label {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 6px 14px; border-radius: 999px;
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18);
+      color: rgba(255,255,255,.85); font-size: 12px; font-weight: 700;
+      letter-spacing: .6px; text-transform: uppercase; margin-bottom: 16px;
+    }
+    .hero h1 { font-size: clamp(28px, 5vw, 48px); font-weight: 950; color: #fff; letter-spacing: -.5px; line-height: 1.15; margin-bottom: 12px; }
+    .hero p { font-size: 17px; color: rgba(255,255,255,.72); max-width: 600px; margin: 0 auto 24px; line-height: 1.6; }
+    .hero-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 28px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--blue), var(--teal));
+      color: #fff; font-weight: 900; font-size: 15px; text-decoration: none;
+      box-shadow: 0 8px 32px rgba(37,99,235,.4); transition: transform .15s, box-shadow .15s;
+    }
+    .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(37,99,235,.5); }
+
+    /* Main */
+    .main { max-width: 1100px; margin: 0 auto; padding: 48px 20px 80px; }
+
+    /* Rate Cards */
+    .rate-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px; margin-bottom: 40px;
+    }
+    .rate-card {
+      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 24px; text-align: center; transition: transform .15s, box-shadow .15s;
+    }
+    .rate-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(37,99,235,.16); }
+    .rate-card .label { font-size: 13px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+    .rate-card .rate { font-size: 36px; font-weight: 950; color: var(--navy); letter-spacing: -1px; margin-bottom: 4px; }
+    .rate-card .change { font-size: 13px; font-weight: 600; }
+    .rate-card .change.down { color: var(--green); }
+    .rate-card .change.up { color: #dc2626; }
+    .rate-card .note { font-size: 11px; color: var(--muted); margin-top: 8px; }
+
+    /* Section */
+    .section { margin-bottom: 48px; }
+    .section-header {
+      font-size: 22px; font-weight: 900; color: var(--navy); margin-bottom: 20px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-header::after {
+      content: ''; flex: 1; height: 1px; background: var(--line);
+    }
+
+    /* Info Cards */
+    .info-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .info-card {
+      background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 24px; transition: transform .15s, box-shadow .15s;
+    }
+    .info-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+    .info-card h3 { font-size: 17px; font-weight: 800; color: var(--navy); margin-bottom: 10px; }
+    .info-card p { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 12px; }
+    .info-card a { font-size: 14px; font-weight: 700; color: var(--blue); text-decoration: none; }
+    .info-card a:hover { text-decoration: underline; }
+
+    /* Learn Section */
+    .learn-list { list-style: none; }
+    .learn-list li {
+      padding: 14px 0; border-bottom: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .learn-list li:last-child { border-bottom: none; }
+    .learn-list a {
+      font-size: 15px; font-weight: 700; color: var(--navy); text-decoration: none;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .learn-list a:hover { color: var(--blue); }
+    .learn-list .arrow { color: var(--blue); font-size: 18px; }
+
+    /* Footer */
+    .footer {
+      background: var(--navy); color: rgba(255,255,255,.55);
+      padding: 32px 20px; text-align: center; font-size: 13px; line-height: 1.7;
+    }
+    .footer a { color: rgba(255,255,255,.7); text-decoration: underline; }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <p><a href="/">← Home</a></p>
-    <div class="card">
-      <h1>Mortgage rates</h1>
-      <p>This is a placeholder page. Next we can build out:</p>
-      <ul>
-        <li>Rate tables (30-year, 15-year, FHA, VA, jumbo)</li>
-        <li>State pages (SEO-friendly)</li>
-        <li>Calculator widgets</li>
-        <li>FAQ + learning center</li>
-      </ul>
-      <p><a href="/#quote">Request a quote</a> to get personalized options.</p>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="brand">
+        <img class="logo" src="/assets/logo.png" alt="FreeRatesUpdate.com">
+      </a>
+      <div class="nav-links">
+        <a href="/#benefits">Benefits</a>
+        <a href="/#calculator">Calculate</a>
+        <a href="/#lenders">Lenders</a>
+        <a href="/#testimonials">Reviews</a>
+        <a href="/blog/">Blog</a>
+        <a href="/mortgage-rates.html" class="active">Rates</a>
+      </div>
     </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-label">📊 Today's Mortgage Rates</div>
+    <h1>Current Mortgage Rates</h1>
+    <p>Updated daily. Compare 30-year fixed, 15-year fixed, FHA, VA, and jumbo loan rates from top lenders.</p>
+    <a href="/#quote" class="hero-cta">Get Personalized Options →</a>
   </div>
+
+  <main class="main">
+
+    <!-- Current Rates -->
+    <div class="section">
+      <div class="section-header">📈 Today's Rates</div>
+      <div class="rate-grid">
+        <div class="rate-card">
+          <div class="label">30-Year Fixed</div>
+          <div class="rate">6.44%</div>
+          <div class="change down">↓ 0.01%</div>
+          <div class="note">National average</div>
+        </div>
+        <div class="rate-card">
+          <div class="label">15-Year Fixed</div>
+          <div class="rate">6.01%</div>
+          <div class="change down">↓ 0.00%</div>
+          <div class="note">National average</div>
+        </div>
+        <div class="rate-card">
+          <div class="label">FHA 30-Year</div>
+          <div class="rate">6.15%</div>
+          <div class="change down">↓ 0.02%</div>
+          <div class="note">With MI</div>
+        </div>
+        <div class="rate-card">
+          <div class="label">VA 30-Year</div>
+          <div class="rate">6.10%</div>
+          <div class="change down">↓ 0.01%</div>
+          <div class="note">For eligible veterans</div>
+        </div>
+        <div class="rate-card">
+          <div class="label">Jumbo 30-Year</div>
+          <div class="rate">6.65%</div>
+          <div class="change up">↑ 0.02%</div>
+          <div class="note">$766k+</div>
+        </div>
+        <div class="rate-card">
+          <div class="label">5/1 ARM</div>
+          <div class="rate">5.85%</div>
+          <div class="change down">↓ 0.03%</div>
+          <div class="note">Adjusts after 5 yrs</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rate Types -->
+    <div class="section">
+      <div class="section-header">🏡️ Loan Types</div>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>30-Year Fixed</h3>
+          <p>The most popular mortgage in America. Stable payments for the life of the loan. Higher rate than 15-year but lower monthly payment.</p>
+          <a href="/blog/">Compare 30-year rates →</a>
+        </div>
+        <div class="info-card">
+          <h3>15-Year Fixed</h3>
+          <p>Pay less interest over the life of the loan. Higher monthly payment but you'll own your home sooner and build equity faster.</p>
+          <a href="/blog/">Compare 15-year rates →</a>
+        </div>
+        <div class="info-card">
+          <h3>FHA Loans</h3>
+          <p>Government-backed loans with lower credit requirements. Great for first-time buyers with scores as low as 580.</p>
+          <a href="/blog/">Learn about FHA loans →</a>
+        </div>
+        <div class="info-card">
+          <h3>VA Loans</h3>
+          <p>Zero down payment for veterans and active-duty military. No PMI required. Some of the best rates available.</p>
+          <a href="/blog/">Learn about VA loans →</a>
+        </div>
+        <div class="info-card">
+          <h3>Jumbo Loans</h3>
+          <p>For loan amounts above $766,550 (most areas). Slightly higher rates but allows financing of luxury properties.</p>
+          <a href="/blog/">Compare jumbo rates →</a>
+        </div>
+        <div class="info-card">
+          <h3>5/1 ARM</h3>
+          <p>Lower initial rate that adjusts after 5 years. Good if you plan to move or refinance within 5-7 years.</p>
+          <a href="/blog/">Learn about ARMs →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calculators -->
+    <div class="section">
+      <div class="section-header">🧮 Mortgage Calculators</div>
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Payment Calculator</h3>
+          <p>Calculate your monthly principal and interest payment based on loan amount, rate, and term.</p>
+          <a href="/#calculator">Use our calculator →</a>
+        </div>
+        <div class="info-card">
+          <h3>Loan Comparison</h3>
+          <p>Compare two loan options side-by-side — see which saves you more over the life of the loan.</p>
+          <a href="/#quote">Get comparison quotes →</a>
+        </div>
+        <div class="info-card">
+          <h3>Early Payoff</h3>
+          <p>See how much interest you save by making extra payments toward principal each month.</p>
+          <a href="/#quote">Request a payoff plan →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Learn -->
+    <div class="section">
+      <div class="section-header">📚 Learn About Rates</div>
+      <ul class="learn-list">
+        <li><a href="/blog/">What is a Mortgage Rate? <span class="arrow">→</span></a></li>
+        <li><a href="/blog/">What Makes Rates Change? <span class="arrow">→</span></a></li>
+        <li><a href="/blog/">Mortgage Rates vs. MBS <span class="arrow">→</span></a></li>
+        <li><a href="/blog/">Rate Volatility Index <span class="arrow">→</span></a></li>
+        <li><a href="/blog/">Freddie Mac Rate Survey <span class="arrow">→</span></a></li>
+        <li><a href="/blog/">MBA Mortgage Applications <span class="arrow">→</span></a></li>
+        <li><a href="/blog/">Historical Mortgage Rates <span class="arrow">→</span></a></li>
+        <li><a href="/blog/">Rates by State <span class="arrow">→</span></a></li>
+      </ul>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>FreeRatesUpdate.com is a marketing lead generator and information service. We are not a lender and we do not offer loan approvals or underwriting decisions through this website.</p>
+    <p style="margin-top:8px"><a href="/">Home</a> · <a href="/mortgage-rates.html">Mortgage Rates</a> · <a href="/advertising-disclosure.html">Advertising Disclosure</a></p>
+  </div>
+
 </body>
 </html>
