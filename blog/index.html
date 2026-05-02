@@ -39,26 +39,31 @@
     }
     .nav-inner {
       max-width: 1100px; margin: 0 auto;
-      padding: 14px 20px;
-      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      display: flex; flex-direction: column; align-items: center;
+      gap: 6px; padding: 8px 0 4px;
     }
     .nav-brand {
-      font-weight: 900; font-size: 17px; letter-spacing: .3px;
-      color: #fff; text-decoration: none;
-      display: flex; align-items: center; gap: 10px;
+      display: flex; align-items: center;
     }
     .nav-logo {
-      height: 200px; width: auto;
+      height: 150px; width: auto;
     }
-    .nav-cta {
-      display: inline-flex; align-items: center; gap: 7px;
-      padding: 9px 18px; border-radius: 999px;
-      background: linear-gradient(135deg, var(--blue), var(--teal));
-      color: #fff; font-weight: 800; font-size: 13px;
-      text-decoration: none; white-space: nowrap;
-      transition: opacity .15s;
+    .nav-links {
+      display: flex; align-items: center; justify-content: center; gap: 20px;
     }
-    .nav-cta:hover { opacity: .88; }
+    .nav-links a {
+      font-size: 0.95rem; font-weight: 700; color: rgba(255,255,255,.8);
+      padding: 8px 14px; border-radius: 10px; transition: all .2s;
+    }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,.1); }
+    .nav-links a.active { color: #fff; background: rgba(255,255,255,.15); }
+    @media (max-width: 768px) {
+      .nav-logo { height: 120px; }
+      .nav-links { flex-wrap: wrap; gap: 6px; }
+    }
+    @media (max-width: 480px) {
+      .nav-logo { height: 100px; }
+    }
 
     /* Hero */
     .hero {
@@ -218,7 +223,14 @@
       <a class="nav-brand" href="/">
         <img class="nav-logo" src="/assets/logo.png" alt="FreeRatesUpdate.com">
       </a>
-      <a class="nav-cta" href="/#quote">Get rate options →</a>
+      <div class="nav-links">
+        <a href="/#benefits">Benefits</a>
+        <a href="/#calculator">Calculate</a>
+        <a href="/#lenders">Lenders</a>
+        <a href="/#testimonials">Reviews</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#quote" class="active">Get Options</a>
+      </div>
     </div>
   </nav>
 

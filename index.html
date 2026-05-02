@@ -76,13 +76,13 @@
     }
     .topbar .inner{
       display:flex;flex-direction:column;align-items:center;
-      gap:8px;padding:12px 0 8px;
+      gap:0;padding:8px 0 4px;
     }
     .brand{
       display:flex;align-items:center;
     }
     .logo{
-      height:350px;width:auto;
+      height:250px;width:auto;
     }
     .nav{
       display:flex;align-items:center;justify-content:center;gap:24px;
@@ -95,12 +95,12 @@
     .nav a:hover{color:var(--text);background:rgba(15,23,36,.05)}
     .nav a.active{color:var(--blue);background:rgba(37,99,235,.08)}
     @media (max-width:768px){
-      .logo{height:250px;}
+      .logo{height:180px;}
       .nav{flex-wrap:wrap;justify-content:center;gap:8px;}
       .nav a{font-size:0.95rem;}
     }
     @media (max-width:480px){
-      .logo{height:180px;}
+      .logo{height:140px;}
     }
     .btn{
       display:inline-flex;align-items:center;justify-content:center;
