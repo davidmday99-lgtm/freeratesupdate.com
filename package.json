@@ -1,0 +1,8 @@
+{
+  "name": "freeratesupdate-blog",
+  "version": "1.0.0",
+  "description": "Daily mortgage rate blog posts",
+  "scripts": {
+    "generate": "node scripts/generate-blog-post.js"
+  }
+}
