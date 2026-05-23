@@ -1,6 +1,12 @@
 ﻿{
     "posts":  [
                   {
+                      "date":  "May 24, 2026",
+                      "title":  "Home appraisal process and tips",
+                      "url":  "/blog/posts/2026-05-24-home-appraisal-process-and-tips.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
                       "date":  "May 23, 2026",
                       "title":  "Refinancing strategies: when it makes sense",
                       "url":  "/blog/posts/2026-05-23-refinancing-strategies-when-it-makes-sense.html",
