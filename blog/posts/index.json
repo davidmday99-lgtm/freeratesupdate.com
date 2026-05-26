@@ -1,6 +1,12 @@
 ﻿{
     "posts":  [
                   {
+                      "date":  "May 26, 2026",
+                      "title":  "Closing costs explained",
+                      "url":  "/blog/posts/2026-05-26-closing-costs-explained.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
                       "date":  "May 24, 2026",
                       "title":  "Home appraisal process and tips",
                       "url":  "/blog/posts/2026-05-24-home-appraisal-process-and-tips.html",
