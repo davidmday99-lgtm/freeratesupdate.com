@@ -1,5 +1,23 @@
-﻿{
+{
     "posts":  [
+                  {
+                      "date":  "June 3, 2026",
+                      "title":  "FHA vs conventional loans: which is right for you",
+                      "url":  "/blog/posts/2026-06-03-fha-vs-conventional-loans-which-is-right-for-you.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
+                      "date":  "June 3, 2026",
+                      "title":  "Mortgage approval contingencies explained",
+                      "url":  "/blog/posts/2026-06-03-mortgage-approval-contingencies-explained.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
+                      "date":  "June 2, 2026",
+                      "title":  "Mortgage rate lock timing strategy",
+                      "url":  "/blog/posts/2026-06-02-mortgage-rate-lock-timing-strategy.html",
+                      "author":  "Michael Miller"
+                  },
                   {
                       "date":  "June 1, 2026",
                       "title":  "Credit score improvement for better mortgage rates",
@@ -386,4 +404,3 @@
                   }
               ]
 }
-
