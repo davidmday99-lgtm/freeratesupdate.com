@@ -1,6 +1,12 @@
 {
     "posts":  [
                   {
+                      "date":  "June 6, 2026",
+                      "title":  "FHA, VA, USDA, and conventional loans: how they compare",
+                      "url":  "/blog/posts/2026-06-06-fha-va-usda-conventional-loans-comparison.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
                       "date":  "June 5, 2026",
                       "title":  "Jumbo loans explained: financing high-value homes",
                       "url":  "/blog/posts/2026-06-05-jumbo-loans-explained-financing-high-value-homes.html",
