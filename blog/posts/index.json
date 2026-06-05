@@ -1,6 +1,18 @@
 {
     "posts":  [
                   {
+                      "date":  "June 5, 2026",
+                      "title":  "Jumbo loans explained: financing high-value homes",
+                      "url":  "/blog/posts/2026-06-05-jumbo-loans-explained-financing-high-value-homes.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
+                      "date":  "June 4, 2026",
+                      "title":  "Understanding mortgage points: when to buy down your rate",
+                      "url":  "/blog/posts/2026-06-04-understanding-mortgage-points-when-to-buy-down-your-rate.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
                       "date":  "June 3, 2026",
                       "title":  "FHA vs conventional loans: which is right for you",
                       "url":  "/blog/posts/2026-06-03-fha-vs-conventional-loans-which-is-right-for-you.html",
@@ -103,7 +115,7 @@
                       "url":  "/blog/posts/2026-05-02-usda-loans-100-percent-financing-for-rural-and-suburban-buyers.html"
                   },
                   {
-                      "title":  "FHA loans: who they\u0027re for and why they can be powerful",
+                      "title":  "FHA loans: who they're for and why they can be powerful",
                       "date":  "May 1, 2026",
                       "author":  "Michael Miller",
                       "url":  "/blog/posts/2026-05-01-fha-loans-who-theyre-for-and-why-they-can-be-powerful.html"
@@ -139,7 +151,7 @@
                       "url":  "/blog/posts/2026-04-26-cash-out-refinance-benefits-risks-and-the-right-reasons-to-use-it.html"
                   },
                   {
-                      "title":  "Refinance basics: when it makes sense (and when it doesn\u0027t)",
+                      "title":  "Refinance basics: when it makes sense (and when it doesn't)",
                       "date":  "April 25, 2026",
                       "author":  "Michael Miller",
                       "url":  "/blog/posts/2026-04-25-refinance-basics-when-it-makes-sense-and-when-it-doesnt.html"
@@ -163,7 +175,7 @@
                       "url":  "/blog/posts/2026-04-22-credit-scores-as-low-as-500-what-to-know-before-you-start.html"
                   },
                   {
-                      "title":  "FHA loans: who they\u0027re for and why they can be powerful",
+                      "title":  "FHA loans: who they're for and why they can be powerful",
                       "date":  "April 21, 2026",
                       "author":  "Michael Miller",
                       "url":  "/blog/posts/2026-04-21-fha-loans-who-theyre-for-and-why-they-can-be-powerful.html"
@@ -199,7 +211,7 @@
                       "url":  "/blog/posts/2026-04-16-cash-out-refinance-benefits-risks-and-the-right-reasons-to-use-it.html"
                   },
                   {
-                      "title":  "Refinance basics: when it makes sense (and when it doesn\u0027t)",
+                      "title":  "Refinance basics: when it makes sense (and when it doesn't)",
                       "date":  "April 15, 2026",
                       "author":  "Michael Miller",
                       "url":  "/blog/posts/2026-04-15-refinance-basics-when-it-makes-sense-and-when-it-doesnt.html"
@@ -223,7 +235,7 @@
                       "url":  "/blog/posts/2026-04-12-credit-scores-as-low-as-500-what-to-know-before-you-start.html"
                   },
                   {
-                      "title":  "FHA loans: who they\u0027re for and why they can be powerful",
+                      "title":  "FHA loans: who they're for and why they can be powerful",
                       "date":  "April 11, 2026",
                       "author":  "Michael Miller",
                       "url":  "/blog/posts/2026-04-11-fha-loans-who-theyre-for-and-why-they-can-be-powerful.html"
@@ -259,7 +271,7 @@
                       "url":  "/blog/posts/2026-04-06-cash-out-refinance-benefits-risks-and-the-right-reasons-to-use-it.html"
                   },
                   {
-                      "title":  "Refinance basics: when it makes sense (and when it doesn\u0027t)",
+                      "title":  "Refinance basics: when it makes sense (and when it doesn't)",
                       "date":  "April 5, 2026",
                       "author":  "Michael Miller",
                       "url":  "/blog/posts/2026-04-05-refinance-basics-when-it-makes-sense-and-when-it-doesnt.html"
@@ -283,7 +295,7 @@
                       "url":  "/blog/posts/2026-04-02-credit-scores-as-low-as-500-what-to-know-before-you-start.html"
                   },
                   {
-                      "title":  "FHA loans: who they\u0027re for and why they can be powerful",
+                      "title":  "FHA loans: who they're for and why they can be powerful",
                       "date":  "April 1, 2026",
                       "author":  "Michael Miller",
                       "url":  "/blog/posts/2026-04-01-fha-loans-who-theyre-for-and-why-they-can-be-powerful.html"
@@ -319,7 +331,7 @@
                       "url":  "/blog/posts/2026-03-27-cash-out-refinance-benefits-risks-and-the-right-reasons-to-use-it.html"
                   },
                   {
-                      "title":  "Refinance basics: when it makes sense (and when it doesn\u0027t)",
+                      "title":  "Refinance basics: when it makes sense (and when it doesn't)",
                       "date":  "March 26, 2026",
                       "author":  "Michael Miller",
                       "url":  "/blog/posts/2026-03-26-refinance-basics-when-it-makes-sense-and-when-it-doesnt.html"
@@ -343,7 +355,7 @@
                       "url":  "/blog/posts/2026-03-23-credit-scores-as-low-as-500-what-to-know-before-you-start.html"
                   },
                   {
-                      "title":  "FHA loans: who they\u0027re for and why they can be powerful",
+                      "title":  "FHA loans: who they're for and why they can be powerful",
                       "date":  "March 22, 2026",
                       "author":  "Michael Miller",
                       "url":  "/blog/posts/2026-03-22-fha-loans-who-theyre-for-and-why-they-can-be-powerful.html"
@@ -379,7 +391,7 @@
                       "url":  "/blog/posts/2026-03-17-cash-out-refinance-benefits-risks-and-the-right-reasons-to-use-it.html"
                   },
                   {
-                      "title":  "Refinance basics: when it makes sense (and when it doesn\u0027t)",
+                      "title":  "Refinance basics: when it makes sense (and when it doesn't)",
                       "date":  "March 16, 2026",
                       "author":  "Michael Miller",
                       "url":  "/blog/posts/2026-03-16-refinance-basics-when-it-makes-sense-and-when-it-doesnt.html"
