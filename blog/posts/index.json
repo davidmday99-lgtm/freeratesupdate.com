@@ -1,6 +1,12 @@
 {
     "posts":  [
                   {
+                      "date":  "June 7, 2026",
+                      "title":  "Summer home buying strategies: what to know in June",
+                      "url":  "/blog/posts/2026-06-07-summer-home-buying-strategies-what-to-know-in-june.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
                       "date":  "June 6, 2026",
                       "title":  "FHA, VA, USDA, and conventional loans: how they compare",
                       "url":  "/blog/posts/2026-06-06-fha-va-usda-conventional-loans-comparison.html",
