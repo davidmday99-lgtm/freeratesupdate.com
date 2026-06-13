@@ -1,6 +1,42 @@
 {
     "posts":  [
                   {
+                      "date":  "June 13, 2026",
+                      "title":  "Home equity strategies: building and using your equity",
+                      "url":  "/blog/posts/2026-06-13-home-equity-strategies-building-and-using-your-equity.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
+                      "date":  "June 12, 2026",
+                      "title":  "Down payment assistance programs explained",
+                      "url":  "/blog/posts/2026-06-12-down-payment-assistance-programs-explained.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
+                      "date":  "June 11, 2026",
+                      "title":  "VA loans: benefits and qualification requirements",
+                      "url":  "/blog/posts/2026-06-11-va-loans-benefits-and-qualification-requirements.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
+                      "date":  "June 10, 2026",
+                      "title":  "Refinancing strategies: when rates drop",
+                      "url":  "/blog/posts/2026-06-10-refinancing-strategies-when-rates-drop.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
+                      "date":  "June 9, 2026",
+                      "title":  "First-time homebuyer: mortgage mistakes to avoid",
+                      "url":  "/blog/posts/2026-06-09-first-time-homebuyer-mortgage-mistakes-to-avoid.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
+                      "date":  "June 8, 2026",
+                      "title":  "Rate trends: what June interest rates reveal",
+                      "url":  "/blog/posts/2026-06-08-rate-trends-what-june-interest-rates-reveal.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
                       "date":  "June 7, 2026",
                       "title":  "Summer home buying strategies: what to know in June",
                       "url":  "/blog/posts/2026-06-07-summer-home-buying-strategies-what-to-know-in-june.html",
