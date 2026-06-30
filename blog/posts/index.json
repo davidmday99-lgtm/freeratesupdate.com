@@ -1,5 +1,65 @@
-﻿{
+{
     "posts":  [
+                  {
+                      "date":  "July 1, 2026",
+                      "title":  "ARM vs fixed-rate mortgages: which is right for you?",
+                      "url":  "/blog/posts/2026-07-01-arm-vs-fixed-rate-mortgages.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
+                      "date":  "June 30, 2026",
+                      "title":  "Mortgage insurance explained: PMI, FHA MIP, VA funding fees",
+                      "url":  "/blog/posts/2026-06-30-pmi-mortgage-insurance-explained.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
+                      "date":  "June 29, 2026",
+                      "title":  "Down payment assistance programs: free money for homebuyers",
+                      "url":  "/blog/posts/2026-06-29-down-payment-assistance-programs.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
+                      "date":  "June 28, 2026",
+                      "title":  "Rate lock strategies: timing your mortgage rate lock",
+                      "url":  "/blog/posts/2026-06-28-rate-lock-strategies.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
+                      "date":  "June 27, 2026",
+                      "title":  "Closing costs negotiation: what you can and can't haggle",
+                      "url":  "/blog/posts/2026-06-27-closing-costs-negotiation.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
+                      "date":  "June 26, 2026",
+                      "title":  "Boost your credit score: 6 strategies for better mortgage rates",
+                      "url":  "/blog/posts/2026-06-26-credit-score-improvement-tips.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
+                      "date":  "June 25, 2026",
+                      "title":  "VA vs FHA loans: which is right for you?",
+                      "url":  "/blog/posts/2026-06-25-va-fha-loans-comparison.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
+                      "date":  "June 24, 2026",
+                      "title":  "Refinancing strategies: when (and why) it pays off",
+                      "url":  "/blog/posts/2026-06-24-refinancing-strategies-when-it-pays.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
+                      "date":  "June 23, 2026",
+                      "title":  "First-time homebuyer essentials: don't skip these steps",
+                      "url":  "/blog/posts/2026-06-23-first-time-homebuyer-essentials.html",
+                      "author":  "Michael Miller"
+                  },
+                  {
+                      "date":  "June 22, 2026",
+                      "title":  "Mortgage rate trends: what June's market tells us",
+                      "url":  "/blog/posts/2026-06-22-mortgage-rate-trends-june-2026.html",
+                      "author":  "Michael Miller"
+                  },
                   {
                       "date":  "June 18, 2026",
                       "title":  "Cash-out refinance strategies: when it makes sense and how to use it wisely",
@@ -14,7 +74,7 @@
                   },
                   {
                       "date":  "June 18, 2026",
-                      "title":  "Mortgage preapproval vs prequalification: what\u0027s the difference",
+                      "title":  "Mortgage preapproval vs prequalification: what's the difference",
                       "url":  "/blog/posts/2026-06-18-mortgage-preapproval-vs-prequalification.html",
                       "author":  "Michael Miller"
                   },
@@ -205,7 +265,7 @@
                       "url":  "/blog/posts/2026-05-02-usda-loans-100-percent-financing-for-rural-and-suburban-buyers.html"
                   },
                   {
-                      "title":  "FHA loans: who they\u0027re for and why they can be powerful",
+                      "title":  "FHA loans: who they're for and why they can be powerful",
                       "date":  "May 1, 2026",
                       "author":  "Michael Miller",
                       "url":  "/blog/posts/2026-05-01-fha-loans-who-theyre-for-and-why-they-can-be-powerful.html"
@@ -241,7 +301,7 @@
                       "url":  "/blog/posts/2026-04-26-cash-out-refinance-benefits-risks-and-the-right-reasons-to-use-it.html"
                   },
                   {
-                      "title":  "Refinance basics: when it makes sense (and when it doesn\u0027t)",
+                      "title":  "Refinance basics: when it makes sense (and when it doesn't)",
                       "date":  "April 25, 2026",
                       "author":  "Michael Miller",
                       "url":  "/blog/posts/2026-04-25-refinance-basics-when-it-makes-sense-and-when-it-doesnt.html"
@@ -265,7 +325,7 @@
                       "url":  "/blog/posts/2026-04-22-credit-scores-as-low-as-500-what-to-know-before-you-start.html"
                   },
                   {
-                      "title":  "FHA loans: who they\u0027re for and why they can be powerful",
+                      "title":  "FHA loans: who they're for and why they can be powerful",
                       "date":  "April 21, 2026",
                       "author":  "Michael Miller",
                       "url":  "/blog/posts/2026-04-21-fha-loans-who-theyre-for-and-why-they-can-be-powerful.html"
@@ -281,228 +341,6 @@
                       "date":  "April 19, 2026",
                       "author":  "Michael Miller",
                       "url":  "/blog/posts/2026-04-19-can-you-skip-a-mortgage-payment-with-a-refinance.html"
-                  },
-                  {
-                      "title":  "Shortening your mortgage term without \"feeling\" the full payment jump",
-                      "date":  "April 18, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-04-18-shortening-your-mortgage-term-without-feeling-the-full-payment-jump.html"
-                  },
-                  {
-                      "title":  "Blended rates: a smarter way to look at your total debt cost",
-                      "date":  "April 17, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-04-17-blended-rates-a-smarter-way-to-look-at-your-total-debt-cost.html"
-                  },
-                  {
-                      "title":  "Cash-out refinance: benefits, risks, and the \"right\" reasons to use it",
-                      "date":  "April 16, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-04-16-cash-out-refinance-benefits-risks-and-the-right-reasons-to-use-it.html"
-                  },
-                  {
-                      "title":  "Refinance basics: when it makes sense (and when it doesn\u0027t)",
-                      "date":  "April 15, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-04-15-refinance-basics-when-it-makes-sense-and-when-it-doesnt.html"
-                  },
-                  {
-                      "title":  "Buying a home: what matters most in your mortgage options",
-                      "date":  "April 14, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-04-14-buying-a-home-what-matters-most-in-your-mortgage-options.html"
-                  },
-                  {
-                      "title":  "VA loans for veterans: major benefits many buyers overlook",
-                      "date":  "April 13, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-04-13-va-loans-for-veterans-major-benefits-many-buyers-overlook.html"
-                  },
-                  {
-                      "title":  "Credit scores as low as 500: what to know before you start",
-                      "date":  "April 12, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-04-12-credit-scores-as-low-as-500-what-to-know-before-you-start.html"
-                  },
-                  {
-                      "title":  "FHA loans: who they\u0027re for and why they can be powerful",
-                      "date":  "April 11, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-04-11-fha-loans-who-theyre-for-and-why-they-can-be-powerful.html"
-                  },
-                  {
-                      "title":  "Appraisal waivers: what they are and when you might qualify",
-                      "date":  "April 10, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-04-10-appraisal-waivers-what-they-are-and-when-you-might-qualify.html"
-                  },
-                  {
-                      "title":  "Can you \"skip\" a mortgage payment with a refinance?",
-                      "date":  "April 9, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-04-09-can-you-skip-a-mortgage-payment-with-a-refinance.html"
-                  },
-                  {
-                      "title":  "Shortening your mortgage term without \"feeling\" the full payment jump",
-                      "date":  "April 8, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-04-08-shortening-your-mortgage-term-without-feeling-the-full-payment-jump.html"
-                  },
-                  {
-                      "title":  "Blended rates: a smarter way to look at your total debt cost",
-                      "date":  "April 7, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-04-07-blended-rates-a-smarter-way-to-look-at-your-total-debt-cost.html"
-                  },
-                  {
-                      "title":  "Cash-out refinance: benefits, risks, and the \"right\" reasons to use it",
-                      "date":  "April 6, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-04-06-cash-out-refinance-benefits-risks-and-the-right-reasons-to-use-it.html"
-                  },
-                  {
-                      "title":  "Refinance basics: when it makes sense (and when it doesn\u0027t)",
-                      "date":  "April 5, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-04-05-refinance-basics-when-it-makes-sense-and-when-it-doesnt.html"
-                  },
-                  {
-                      "title":  "Buying a home: what matters most in your mortgage options",
-                      "date":  "April 4, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-04-04-buying-a-home-what-matters-most-in-your-mortgage-options.html"
-                  },
-                  {
-                      "title":  "VA loans for veterans: major benefits many buyers overlook",
-                      "date":  "April 3, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-04-03-va-loans-for-veterans-major-benefits-many-buyers-overlook.html"
-                  },
-                  {
-                      "title":  "Credit scores as low as 500: what to know before you start",
-                      "date":  "April 2, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-04-02-credit-scores-as-low-as-500-what-to-know-before-you-start.html"
-                  },
-                  {
-                      "title":  "FHA loans: who they\u0027re for and why they can be powerful",
-                      "date":  "April 1, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-04-01-fha-loans-who-theyre-for-and-why-they-can-be-powerful.html"
-                  },
-                  {
-                      "title":  "Appraisal waivers: what they are and when you might qualify",
-                      "date":  "March 31, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-03-31-appraisal-waivers-what-they-are-and-when-you-might-qualify.html"
-                  },
-                  {
-                      "title":  "Can you \"skip\" a mortgage payment with a refinance?",
-                      "date":  "March 30, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-03-30-can-you-skip-a-mortgage-payment-with-a-refinance.html"
-                  },
-                  {
-                      "title":  "Shortening your mortgage term without \"feeling\" the full payment jump",
-                      "date":  "March 29, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-03-29-shortening-your-mortgage-term-without-feeling-the-full-payment-jump.html"
-                  },
-                  {
-                      "title":  "Blended rates: a smarter way to look at your total debt cost",
-                      "date":  "March 28, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-03-28-blended-rates-a-smarter-way-to-look-at-your-total-debt-cost.html"
-                  },
-                  {
-                      "title":  "Cash-out refinance: benefits, risks, and the \"right\" reasons to use it",
-                      "date":  "March 27, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-03-27-cash-out-refinance-benefits-risks-and-the-right-reasons-to-use-it.html"
-                  },
-                  {
-                      "title":  "Refinance basics: when it makes sense (and when it doesn\u0027t)",
-                      "date":  "March 26, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-03-26-refinance-basics-when-it-makes-sense-and-when-it-doesnt.html"
-                  },
-                  {
-                      "title":  "Buying a home: what matters most in your mortgage options",
-                      "date":  "March 25, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-03-25-buying-a-home-what-matters-most-in-your-mortgage-options.html"
-                  },
-                  {
-                      "title":  "VA loans for veterans: major benefits many buyers overlook",
-                      "date":  "March 24, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-03-24-va-loans-for-veterans-major-benefits-many-buyers-overlook.html"
-                  },
-                  {
-                      "title":  "Credit scores as low as 500: what to know before you start",
-                      "date":  "March 23, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-03-23-credit-scores-as-low-as-500-what-to-know-before-you-start.html"
-                  },
-                  {
-                      "title":  "FHA loans: who they\u0027re for and why they can be powerful",
-                      "date":  "March 22, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-03-22-fha-loans-who-theyre-for-and-why-they-can-be-powerful.html"
-                  },
-                  {
-                      "title":  "Appraisal waivers: what they are and when you might qualify",
-                      "date":  "March 21, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-03-21-appraisal-waivers-what-they-are-and-when-you-might-qualify.html"
-                  },
-                  {
-                      "title":  "Can you \"skip\" a mortgage payment with a refinance?",
-                      "date":  "March 20, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-03-20-can-you-skip-a-mortgage-payment-with-a-refinance.html"
-                  },
-                  {
-                      "title":  "Shortening your mortgage term without \"feeling\" the full payment jump",
-                      "date":  "March 19, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-03-19-shortening-your-mortgage-term-without-feeling-the-full-payment-jump.html"
-                  },
-                  {
-                      "title":  "Blended rates: a smarter way to look at your total debt cost",
-                      "date":  "March 18, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-03-18-blended-rates-a-smarter-way-to-look-at-your-total-debt-cost.html"
-                  },
-                  {
-                      "title":  "Cash-out refinance: benefits, risks, and the \"right\" reasons to use it",
-                      "date":  "March 17, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-03-17-cash-out-refinance-benefits-risks-and-the-right-reasons-to-use-it.html"
-                  },
-                  {
-                      "title":  "Refinance basics: when it makes sense (and when it doesn\u0027t)",
-                      "date":  "March 16, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-03-16-refinance-basics-when-it-makes-sense-and-when-it-doesnt.html"
-                  },
-                  {
-                      "title":  "Buying a home: what matters most in your mortgage options",
-                      "date":  "March 15, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-03-15-buying-a-home-what-matters-most-in-your-mortgage-options.html"
-                  },
-                  {
-                      "title":  "VA loans for veterans: major benefits many buyers overlook",
-                      "date":  "March 14, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-03-14-va-loans-for-veterans-major-benefits-many-buyers-overlook.html"
-                  },
-                  {
-                      "title":  "Credit scores as low as 500: what to know before you start",
-                      "date":  "March 13, 2026",
-                      "author":  "Michael Miller",
-                      "url":  "/blog/posts/2026-03-13-credit-scores-as-low-as-500-what-to-know-before-you-start.html"
                   }
               ]
 }
